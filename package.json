@@ -1,0 +1,25 @@
+{
+  "name": "react-native-template-dvhb",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Aleksey Subbotenko <asu@dvhb.ru>",
+  "homepage": "https://github.com/dvhb/react-native-template-dvhb#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvhb/react-native-template-dvhb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dvhb/react-native-template-dvhb/issues"
+  },
+  "keywords": [
+    "react-native",
+    "typescript",
+    "jest",
+    "template",
+    "boilerplate"
+  ],
+  "files": [
+    "template",
+    "template.config.js"
+  ]
+}

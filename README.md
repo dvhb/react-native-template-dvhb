@@ -1,1 +1,1 @@
-# template-react-native
+# `npx react-native init DvhbApp --template=dvhb`
