@@ -1,20 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import React, { Fragment } from 'react';
+import { SafeAreaView, ScrollView, View, Text, StatusBar } from 'react-native';
 
 import {
   Header,
@@ -23,17 +8,20 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
-const App: () => React$Node = () => {
+type Props = {};
+
+export function Home({  }: Props) {
+  const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
+
   return (
-    <>
+    <Fragment>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+        <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
           <Header />
-          {global.HermesInternal == null ? null : (
+          {!usingHermes ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
@@ -42,8 +30,8 @@ const App: () => React$Node = () => {
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
+                Edit <Text style={styles.highlight}>Home.tsx</Text> to change this screen and then come back to see your
+                edits.
               </Text>
             </View>
             <View style={styles.sectionContainer}>
@@ -60,19 +48,17 @@ const App: () => React$Node = () => {
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
+              <Text style={styles.sectionDescription}>Read the docs to discover what to do next:</Text>
             </View>
             <LearnMoreLinks />
           </View>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </Fragment>
   );
-};
+}
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
   },
@@ -110,5 +96,3 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-
-export default App;

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["es6", "esnext.intl", "es2017.intl", "es2018.intl"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "include": ["./typings", "./src", "./storybook"],
+  "exclude": ["node_modules", "android", "ios", "build", "babel.config.js", "metro.config.js", "App.js"]
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "id": "app.test",
+    "description": "Test message",
+    "defaultMessage": "Test",
+    "message": "Test {value}"
+  }
+]

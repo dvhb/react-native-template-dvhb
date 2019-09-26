@@ -1,0 +1,7 @@
+{
+  "extends": ["@dvhb/tslint-config-react"],
+  "linterOptions": {
+    "exclude": ["**/*.js", "src/ui/Icon/components/*.tsx"]
+  },
+  "rules": {}
+}

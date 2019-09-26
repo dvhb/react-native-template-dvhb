@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* DvhbAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DvhbAppTests.m */; };
 		0D6D2712AEFA488F140ADF1F /* libPods-DvhbApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD57F5A39D3532CE2735EB94 /* libPods-DvhbApp-tvOSTests.a */; };
@@ -20,6 +19,8 @@
 		43DABCECB40E990D0302CCC3 /* libPods-DvhbAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E25C90DA2298C54D202DE0B9 /* libPods-DvhbAppTests.a */; };
 		74159C661383F49BEC076A48 /* libPods-DvhbApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 086165E1ED51ED419F2697EC /* libPods-DvhbApp-tvOS.a */; };
 		857F7A07451B112C975E9C13 /* libPods-DvhbApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB85D0CA8D122CCF3D152D4B /* libPods-DvhbApp.a */; };
+		E55A15E5536B4BAFBC750EFB /* FuturaNewBold-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89495DCBBDFB44AE9C3D510D /* FuturaNewBold-Reg.ttf */; };
+		003AF6CD94D64E2680CD4933 /* FuturaNewMedium-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6113876E0C684774B8320184 /* FuturaNewMedium-Reg.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FBA43F236DBDB3103698EE53 /* Pods-DvhbApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DvhbApp-tvOSTests/Pods-DvhbApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		89495DCBBDFB44AE9C3D510D /* FuturaNewBold-Reg.ttf */ = {isa = PBXFileReference; name = "FuturaNewBold-Reg.ttf"; path = "../assets/fonts/FuturaNewBold-Reg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6113876E0C684774B8320184 /* FuturaNewMedium-Reg.ttf */ = {isa = PBXFileReference; name = "FuturaNewMedium-Reg.ttf"; path = "../assets/fonts/FuturaNewMedium-Reg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				607C266B7BC015C253F478FF /* Pods */,
+				77BA31A77E3740DB9101EE26 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +201,16 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		77BA31A77E3740DB9101EE26 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				89495DCBBDFB44AE9C3D510D /* FuturaNewBold-Reg.ttf */,
+				6113876E0C684774B8320184 /* FuturaNewMedium-Reg.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -285,7 +299,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -338,6 +352,8 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				E55A15E5536B4BAFBC750EFB /* FuturaNewBold-Reg.ttf in Resources */,
+				003AF6CD94D64E2680CD4933 /* FuturaNewMedium-Reg.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
