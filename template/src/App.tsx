@@ -11,7 +11,7 @@ import { HomeContainer, BootContainer, DrawerContainer } from './containers';
 
 const appNavigator = createSwitchNavigator(
   {
-    // boot: BootContainer,
+    boot: BootContainer,
     Root: createDrawerNavigator(
       {
         App: createStackNavigator({
