@@ -1,22 +1,31 @@
-// tslint:disable:jsx-no-lambda
-
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
-import { action } from '@storybook/addon-actions';
-import EStyleSheet from 'react-native-extended-stylesheet';
 
 import { Btn } from './Btn';
+import { Container } from '../../../storybook/decorators';
 
-storiesOf('Button', module)
-  .add('default', () => <Btn onPress={action('clicked-default')}>Default</Btn>)
-  .add('with custom styles', () => (
-    <Btn style={styles.custom} onPress={action('clicked-custom')}>
-      Custom
+const noop = () => {};
+
+storiesOf('UI|Btn', module)
+  .addDecorator((story: any) => <Container>{story()}</Container>)
+  .add('default', () => <Btn onPress={noop}>Default</Btn>)
+  .add('small', () => (
+    <Btn small onPress={noop}>
+      Small
+    </Btn>
+  ))
+  .add('bordered', () => (
+    <Btn bordered onPress={noop}>
+      Bordered
+    </Btn>
+  ))
+  .add('inverse', () => (
+    <Btn inverse onPress={noop}>
+      Inverse
+    </Btn>
+  ))
+  .add('disabled', () => (
+    <Btn disabled onPress={noop}>
+      Disabled
     </Btn>
   ));
-
-const styles = EStyleSheet.create({
-  custom: {
-    backgroundColor: 'red',
-  },
-});

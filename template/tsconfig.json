@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-native",
-    "lib": ["es6", "esnext.intl", "es2017.intl", "es2018.intl"],
+    "lib": ["esnext", "es2019.array", "dom", "esnext.intl", "es2017.intl", "es2018.intl"],
     "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
@@ -14,5 +14,5 @@
     "skipLibCheck": true
   },
   "include": ["./typings", "./src", "./storybook"],
-  "exclude": ["node_modules", "android", "ios", "build", "babel.config.js", "metro.config.js", "App.js"]
+  "exclude": ["node_modules", "android", "ios", "build", "babel.config.js", "metro.config.js", "App.js", "src/api"]
 }

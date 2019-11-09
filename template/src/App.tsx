@@ -5,13 +5,14 @@ import {
   createStackNavigator,
   createDrawerNavigator,
   createSwitchNavigator,
+  NavigationContainerComponent,
 } from 'react-navigation';
 
-import { HomeContainer, BootContainer, DrawerContainer } from './containers';
+import { HomeContainer, DrawerContainer } from './screens';
+import { navigationService } from './services/navigation';
 
 const appNavigator = createSwitchNavigator(
   {
-    boot: BootContainer,
     Root: createDrawerNavigator(
       {
         App: createStackNavigator({
@@ -27,13 +28,16 @@ const appNavigator = createSwitchNavigator(
     ),
   },
   {
-    initialRouteName: 'boot',
+    initialRouteName: 'Root',
   },
 );
 
 export class App extends Component {
+  getRef = (navigatorRef: NavigationContainerComponent) => {
+    navigationService.init(navigatorRef);
+  };
   render() {
     const AppContainer = createAppContainer(appNavigator);
-    return <AppContainer />;
+    return <AppContainer ref={this.getRef} />;
   }
 }

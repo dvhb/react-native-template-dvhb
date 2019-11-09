@@ -29,6 +29,7 @@ build/
 .gradle
 local.properties
 *.iml
+index.android.bundle*
 
 # Visual Studio Code
 #
@@ -64,3 +65,4 @@ buck-out/
 
 .env
 storybook/storyLoader.js
+api-schema.yaml
