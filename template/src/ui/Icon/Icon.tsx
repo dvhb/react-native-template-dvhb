@@ -1,6 +1,7 @@
 import React, { Component, SVGAttributes } from 'react';
 import EStyleSheet, { AnyObject } from 'react-native-extended-stylesheet';
 
+import { ColorsType } from '../../boot/stylesheetConfig';
 import * as Svg from './components';
 
 interface Props extends SVGAttributes<SVGElement> {
@@ -8,12 +9,14 @@ interface Props extends SVGAttributes<SVGElement> {
   width?: number;
   height?: number;
   style?: AnyObject;
+  color?: ColorsType;
 }
 
 export class Icon extends Component<Props> {
   static defaultProps = {
     width: 24,
     height: 24,
+    color: '$black',
   };
 
   static capitalize = (s: string) => {
@@ -21,20 +24,17 @@ export class Icon extends Component<Props> {
   };
 
   render() {
-    const { name, width, height, style, ...rest } = this.props;
+    const { name, width, height, style, color, ...rest } = this.props;
+
+    const iconColorStyle = EStyleSheet.create({
+      color: EStyleSheet.value(color),
+    });
 
     // @ts-ignore
     const IconComponent = Svg[Icon.capitalize(name)];
-    const viewBox = `0 0 ${width} ${height}`;
 
     if (!IconComponent) return null;
 
-    return <IconComponent viewBox={viewBox} width={width} height={height} style={[styles.icon, style]} {...rest} />;
+    return <IconComponent width={width} height={height} style={[iconColorStyle, style]} {...rest} />;
   }
 }
-
-const styles = EStyleSheet.create({
-  icon: {
-    color: '$black',
-  },
-});

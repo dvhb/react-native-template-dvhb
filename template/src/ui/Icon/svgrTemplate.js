@@ -1,5 +1,5 @@
 function template({ template }, opts, { componentName, jsx }) {
-  const typeScriptTpl = template.smart({ plugins: ['typescript'] })
+  const typeScriptTpl = template.smart({ plugins: ['typescript'] });
 
   return typeScriptTpl.ast`
     ${'// tslint:disable'}
@@ -10,9 +10,4 @@ function template({ template }, opts, { componentName, jsx }) {
   `;
 }
 
-module.exports = {
-  template,
-  replaceAttrValues: {
-    'black': 'currentColor',
-  },
-};
+module.exports = template;
