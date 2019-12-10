@@ -1,4 +1,5 @@
 // tslint:disable
+// eslint-disable
 /**
  * Swagger Petstore
  * This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
@@ -39,18 +40,30 @@ export interface IApiResponse {
 }
 
 export function IApiResponseFromJSON(json: any): IApiResponse {
+    return IApiResponseFromJSONTyped(json, false);
+}
+
+export function IApiResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): IApiResponse {
+    if ((json === undefined) || (json === null)) {
+        return json;
+    }
     return {
+        
         'code': !exists(json, 'code') ? undefined : json['code'],
         'type': !exists(json, 'type') ? undefined : json['type'],
         'message': !exists(json, 'message') ? undefined : json['message'],
     };
 }
 
-export function IApiResponseToJSON(value?: IApiResponse): any {
+export function IApiResponseToJSON(value?: IApiResponse | null): any {
     if (value === undefined) {
         return undefined;
     }
+    if (value === null) {
+        return null;
+    }
     return {
+        
         'code': value.code,
         'type': value.type,
         'message': value.message,

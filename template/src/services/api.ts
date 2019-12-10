@@ -1,5 +1,5 @@
 import Config from 'react-native-config';
-import { UserApi, Configuration } from '../api/src';
+import { UserApi, Configuration } from '../api';
 const basePath = Config.BASE_PATH;
 
 class UserApiSingleton extends UserApi {

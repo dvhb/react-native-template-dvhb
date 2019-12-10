@@ -1,4 +1,5 @@
 // tslint:disable
+// eslint-disable
 /**
  * Swagger Petstore
  * This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
@@ -15,9 +16,11 @@ import { exists, mapValues } from '../runtime';
 import {
     ICategory,
     ICategoryFromJSON,
+    ICategoryFromJSONTyped,
     ICategoryToJSON,
     ITag,
     ITagFromJSON,
+    ITagFromJSONTyped,
     ITagToJSON,
 } from './';
 
@@ -66,26 +69,38 @@ export interface IPet {
 }
 
 export function IPetFromJSON(json: any): IPet {
+    return IPetFromJSONTyped(json, false);
+}
+
+export function IPetFromJSONTyped(json: any, ignoreDiscriminator: boolean): IPet {
+    if ((json === undefined) || (json === null)) {
+        return json;
+    }
     return {
+        
         'id': !exists(json, 'id') ? undefined : json['id'],
         'category': !exists(json, 'category') ? undefined : ICategoryFromJSON(json['category']),
         'name': json['name'],
         'photoUrls': json['photoUrls'],
-        'tags': !exists(json, 'tags') ? undefined : (json['tags'] as Array<any>).map(ITagFromJSON),
+        'tags': !exists(json, 'tags') ? undefined : ((json['tags'] as Array<any>).map(ITagFromJSON)),
         'status': !exists(json, 'status') ? undefined : json['status'],
     };
 }
 
-export function IPetToJSON(value?: IPet): any {
+export function IPetToJSON(value?: IPet | null): any {
     if (value === undefined) {
         return undefined;
     }
+    if (value === null) {
+        return null;
+    }
     return {
+        
         'id': value.id,
         'category': ICategoryToJSON(value.category),
         'name': value.name,
         'photoUrls': value.photoUrls,
-        'tags': value.tags === undefined ? undefined : (value.tags as Array<any>).map(ITagToJSON),
+        'tags': value.tags === undefined ? undefined : ((value.tags as Array<any>).map(ITagToJSON)),
         'status': value.status,
     };
 }

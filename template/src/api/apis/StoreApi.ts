@@ -1,4 +1,5 @@
 // tslint:disable
+// eslint-disable
 /**
  * Swagger Petstore
  * This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
@@ -59,10 +60,10 @@ export class StoreApi extends runtime.BaseAPI {
         return new runtime.VoidApiResponse(response);
     }
 
-   /**
-    * For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
-    * Delete purchase order by ID
-    */
+    /**
+     * For valid response try integer IDs with positive integer value. Negative or non-integer values will generate API errors
+     * Delete purchase order by ID
+     */
     async deleteOrder(requestParameters: DeleteOrderRequest): Promise<void> {
         await this.deleteOrderRaw(requestParameters);
     }
@@ -90,10 +91,10 @@ export class StoreApi extends runtime.BaseAPI {
         return new runtime.JSONApiResponse<any>(response);
     }
 
-   /**
-    * Returns a map of status codes to quantities
-    * Returns pet inventories by status
-    */
+    /**
+     * Returns a map of status codes to quantities
+     * Returns pet inventories by status
+     */
     async getInventory(): Promise<{ [key: string]: number; }> {
         const response = await this.getInventoryRaw();
         return await response.value();
@@ -122,10 +123,10 @@ export class StoreApi extends runtime.BaseAPI {
         return new runtime.JSONApiResponse(response, (jsonValue) => IOrderFromJSON(jsonValue));
     }
 
-   /**
-    * For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions
-    * Find purchase order by ID
-    */
+    /**
+     * For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions
+     * Find purchase order by ID
+     */
     async getOrderById(requestParameters: GetOrderByIdRequest): Promise<IOrder> {
         const response = await this.getOrderByIdRaw(requestParameters);
         return await response.value();
@@ -156,9 +157,9 @@ export class StoreApi extends runtime.BaseAPI {
         return new runtime.JSONApiResponse(response, (jsonValue) => IOrderFromJSON(jsonValue));
     }
 
-   /**
-    * Place an order for a pet
-    */
+    /**
+     * Place an order for a pet
+     */
     async placeOrder(requestParameters: PlaceOrderRequest): Promise<IOrder> {
         const response = await this.placeOrderRaw(requestParameters);
         return await response.value();

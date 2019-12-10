@@ -1,4 +1,5 @@
 // tslint:disable
+// eslint-disable
 /**
  * Swagger Petstore
  * This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.
@@ -15,35 +16,47 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface ITag
+ * @interface ICategory
  */
-export interface ITag {
+export interface ICategory {
     /**
      * 
      * @type {number}
-     * @memberof ITag
+     * @memberof ICategory
      */
     id?: number;
     /**
      * 
      * @type {string}
-     * @memberof ITag
+     * @memberof ICategory
      */
     name?: string;
 }
 
-export function ITagFromJSON(json: any): ITag {
+export function ICategoryFromJSON(json: any): ICategory {
+    return ICategoryFromJSONTyped(json, false);
+}
+
+export function ICategoryFromJSONTyped(json: any, ignoreDiscriminator: boolean): ICategory {
+    if ((json === undefined) || (json === null)) {
+        return json;
+    }
     return {
+        
         'id': !exists(json, 'id') ? undefined : json['id'],
         'name': !exists(json, 'name') ? undefined : json['name'],
     };
 }
 
-export function ITagToJSON(value?: ITag): any {
+export function ICategoryToJSON(value?: ICategory | null): any {
     if (value === undefined) {
         return undefined;
     }
+    if (value === null) {
+        return null;
+    }
     return {
+        
         'id': value.id,
         'name': value.name,
     };

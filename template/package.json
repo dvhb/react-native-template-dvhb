@@ -46,7 +46,7 @@
     "@dvhb/icons": "^0.1.5",
     "@dvhb/react-intl-messages": "^2.4.2",
     "@dvhb/tslint-config-react": "^1.0.9",
-    "@openapitools/openapi-generator-cli": "0.0.17-4.1.1",
+    "@openapitools/openapi-generator-cli": "^1.0.7-4.2.1",
     "@react-native-community/eslint-config": "0.0.3",
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-knobs": "^5.2.5",
