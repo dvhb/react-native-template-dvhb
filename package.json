@@ -30,11 +30,24 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^8.0.0",
     "husky": "^3.0.5",
     "semantic-release": "^16.0.1"
   },
   "dependencies": {},
   "scripts": {
     "semantic-release": "semantic-release"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "branch": "master"
   }
 }
