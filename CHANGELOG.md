@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.2...v1.0.3) (2020-01-15)
+
+
+### Bug Fixes
+
+* rename underscored files ([c78824b](https://github.com/dvhb/react-native-template-dvhb/commit/c78824b73350951d6a6c83b9da16fd255aa6b09f))
+
 ## [1.0.2](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.1...v1.0.2) (2020-01-15)
 
 
