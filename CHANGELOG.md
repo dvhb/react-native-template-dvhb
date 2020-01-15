@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.3...v1.0.4) (2020-01-15)
+
+
+### Bug Fixes
+
+* **package:** update @dvhb/icons to version 1.2.2 ([1a99e10](https://github.com/dvhb/react-native-template-dvhb/commit/1a99e10e6f7a361755c1624554d7978c4e62ef13))
+
 ## [1.0.3](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.2...v1.0.3) (2020-01-15)
 
 
