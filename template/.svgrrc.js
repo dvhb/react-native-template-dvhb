@@ -10,4 +10,9 @@ function template({ template }, opts, { componentName, jsx }) {
   `;
 }
 
-module.exports = template;
+module.exports = {
+  template,
+  replaceAttrValues: {
+    '#000': 'currentColor',
+  },
+};
