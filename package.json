@@ -48,6 +48,6 @@
       "@semantic-release/npm",
       "@semantic-release/git"
     ],
-    "branch": "master"
+    "branches": ["master", "next", "webview"]
   }
 }
