@@ -16,7 +16,7 @@
     "prestorybook": "rnstl",
     "messages": "messages extract",
     "messages:clean": "messages clean",
-    "icons": "dvhb-icons generate -i src/ui/Icon/src -c src/ui/Icon/components -t src/ui/Icon/svgrTemplate.js",
+    "icons": "dvhb-icons generate -n -i src/ui/Icon/src -c src/ui/Icon/components",
     "icons:figma2svg": "dvhb-icons figma2svg -i src/ui/Icon/src"
   },
   "dependencies": {
@@ -43,7 +43,7 @@
     "@babel/runtime": "7.5.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "@dvhb/icons": "^0.1.5",
+    "@dvhb/icons": "^1.2.2",
     "@dvhb/react-intl-messages": "^2.4.2",
     "@dvhb/tslint-config-react": "^1.0.9",
     "@openapitools/openapi-generator-cli": "^1.0.7-4.2.1",
