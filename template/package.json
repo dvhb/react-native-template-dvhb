@@ -50,7 +50,7 @@
     "@openapitools/openapi-generator-cli": "^1.0.7-4.2.1",
     "@react-native-community/eslint-config": "0.0.6",
     "@storybook/addon-actions": "^5.3.5",
-    "@storybook/addon-knobs": "^5.2.5",
+    "@storybook/addon-knobs": "^5.3.5",
     "@storybook/addon-links": "^5.2.5",
     "@storybook/addon-ondevice-actions": "^5.2.5",
     "@storybook/addon-ondevice-knobs": "^5.2.5",
