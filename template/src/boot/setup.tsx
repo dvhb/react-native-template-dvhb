@@ -2,7 +2,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Text } from 'react-native';
 import { IntlProvider } from 'react-intl';
-import 'intl';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { PersistGate } from 'redux-persist/integration/react';
 
