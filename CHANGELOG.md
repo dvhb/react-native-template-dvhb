@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.5...v1.0.6) (2020-01-16)
+
+
+### Bug Fixes
+
+* lint errors ([400d865](https://github.com/dvhb/react-native-template-dvhb/commit/400d86560917bbeca5962e523e73e8e3261f98da))
+* **package:** update prettier ([1dede46](https://github.com/dvhb/react-native-template-dvhb/commit/1dede466a1740f61412f81ad0d183632d8e284c1))
+
 ## [1.0.5](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.4...v1.0.5) (2020-01-16)
 
 
