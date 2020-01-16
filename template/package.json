@@ -35,7 +35,7 @@
     "redux": "^4.0.4",
     "redux-persist": "^6.0.0",
     "reselect": "^4.0.0",
-    "typesafe-actions": "4.4.2"
+    "typesafe-actions": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.8.3",
