@@ -1,4 +1,3 @@
-import { Dimensions } from 'react-native';
 import { NavigationActions, NavigationContainerComponent, NavigationParams } from 'react-navigation';
 
 class NavigationService {
