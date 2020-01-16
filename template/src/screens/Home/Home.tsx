@@ -12,7 +12,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 type Props = {};
 
-export function Home({  }: Props) {
+export function Home({}: Props) {
   const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
 
   return (

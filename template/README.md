@@ -2,11 +2,12 @@
 
 > Based on [@dvhb/template-react-native](https://github.com/dvhb/template-react-native).
 
->![logo](./app-logo.svg)
+> ![logo](./app-logo.svg)
 
 ## Stack
 
-- React Native `0.60.5`
-- TypeScript `3.5.3`
+- React Native `0.61.5`
+- TypeScript `3.7.4`
 - redux `^4.0.4`
 - typesafe-actions `^4.4.2`
+- react-navigation `^3.11.1`

@@ -6,7 +6,7 @@ import { Drawer } from './Drawer';
 
 type Props = NavigationScreenProps;
 
-export function DrawerContainer({  }: Props) {
+export function DrawerContainer({}: Props) {
   return (
     <SafeAreaView>
       <ScrollView>
