@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.4...v1.0.5) (2020-01-16)
+
+
+### Bug Fixes
+
+* **intl:** enable android-jsc-intl ([a1e4fb8](https://github.com/dvhb/react-native-template-dvhb/commit/a1e4fb8434a88f74415d1bc5d7bd6bb3cad8fce5))
+
 ## [1.0.4](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.3...v1.0.4) (2020-01-15)
 
 
