@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.7...v1.0.8) (2020-01-16)
+
+
+### Bug Fixes
+
+* **package:** update react-navigation to v4 ([ccf501f](https://github.com/dvhb/react-native-template-dvhb/commit/ccf501fdc44a85cd3acdbff7dc1eac67d26be8e1))
+
 ## [1.0.7](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.6...v1.0.7) (2020-01-16)
 
 
