@@ -37,7 +37,8 @@
   },
   "dependencies": {},
   "scripts": {
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "release": {
     "plugins": [

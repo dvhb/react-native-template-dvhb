@@ -1,16 +1,6 @@
-language: node_js
-
-node_js:
-  - '10'
-  - '12'
-
-branches:
-  except:
-    - /^v[0-9]/
-
-jobs:
-  include:
-    - stage: release
-      node_js: lts/*
-      script:
-        - npx semantic-release
+import:
+  - .travis/node.yml
+  - .travis/node-versions.yml
+  - .travis/semantic-release.yml
+  - .travis/greenkeeper.yml
+  - .travis/codecov.yml
