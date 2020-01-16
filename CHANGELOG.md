@@ -1,3 +1,25 @@
+## [1.0.7](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.6...v1.0.7) (2020-01-16)
+
+
+### Bug Fixes
+
+* **package:** freeze typesafe-actions v4 ([020d5d9](https://github.com/dvhb/react-native-template-dvhb/commit/020d5d971dd5200d0c1081d96285ba4cbdfcc7a1))
+
+## [1.0.6](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.5...v1.0.6) (2020-01-16)
+
+
+### Bug Fixes
+
+* lint errors ([400d865](https://github.com/dvhb/react-native-template-dvhb/commit/400d86560917bbeca5962e523e73e8e3261f98da))
+* **package:** update prettier ([1dede46](https://github.com/dvhb/react-native-template-dvhb/commit/1dede466a1740f61412f81ad0d183632d8e284c1))
+
+## [1.0.5](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.4...v1.0.5) (2020-01-16)
+
+
+### Bug Fixes
+
+* **intl:** enable android-jsc-intl ([a1e4fb8](https://github.com/dvhb/react-native-template-dvhb/commit/a1e4fb8434a88f74415d1bc5d7bd6bb3cad8fce5))
+
 ## [1.0.4](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.3...v1.0.4) (2020-01-15)
 
 

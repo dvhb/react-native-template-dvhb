@@ -1,6 +1,6 @@
 {
   "name": "@dvhb/template-react-native",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "license": "MIT",
   "author": "Aleksey Subbotenko <asu@dvhb.ru>",
   "homepage": "https://github.com/dvhb/react-native-template-dvhb#readme",
@@ -38,7 +38,7 @@
   "dependencies": {},
   "scripts": {
     "semantic-release": "semantic-release",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd template && npm ci && npm run tsc && npm run lint"
   },
   "release": {
     "plugins": [
