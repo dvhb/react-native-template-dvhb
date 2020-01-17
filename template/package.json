@@ -8,6 +8,7 @@
     "storybook-server": "start-storybook",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "ios:release": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
     "test": "jest",
     "lint": "tslint -p tsconfig.json -c tslint.json -t verbose",
     "tsc": "tsc",
