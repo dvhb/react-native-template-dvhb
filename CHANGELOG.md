@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.8...v1.0.9) (2020-01-17)
+
+
+### Bug Fixes
+
+* **package:** update package-lock.json ([772453f](https://github.com/dvhb/react-native-template-dvhb/commit/772453f20c4c5168baddf3c1add7e42899eab389))
+
 ## [1.0.8](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.7...v1.0.8) (2020-01-16)
 
 
