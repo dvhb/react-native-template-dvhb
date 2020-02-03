@@ -1,10 +1,9 @@
 import React from 'react';
 import { ScrollView, SafeAreaView } from 'react-native';
-import { NavigationScreenProps } from 'react-navigation';
 
 import { Drawer } from './Drawer';
 
-type Props = NavigationScreenProps;
+type Props = {};
 
 export function DrawerContainer({}: Props) {
   return (

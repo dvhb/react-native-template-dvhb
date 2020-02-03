@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-import { NavigationScreenOptions, NavigationScreenProp, NavigationParams } from 'react-navigation';
+import { NavigationStackScreenProps } from 'react-navigation-stack';
 
 import { Home } from './Home';
 
-type Props = {
-  navigation: NavigationScreenProp<NavigationParams>;
-};
+type Params = {};
+type Props = {} & NavigationStackScreenProps<Params>;
 
 export class HomeContainer extends Component<Props> {
-  static navigationOptions: NavigationScreenOptions = {
-    header: null,
-  };
-
   render() {
     return <Home />;
   }

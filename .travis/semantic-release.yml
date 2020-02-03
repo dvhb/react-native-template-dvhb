@@ -4,6 +4,7 @@ branches:
     - next
     - beta
     - webview
+    - /^feature.*$/
     - /^\d+\.(\d+|x)(\.x)?$/
 
 jobs:

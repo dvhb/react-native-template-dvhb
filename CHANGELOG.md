@@ -1,3 +1,24 @@
+## [1.0.9](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.8...v1.0.9) (2020-01-17)
+
+
+### Bug Fixes
+
+* **package:** update package-lock.json ([772453f](https://github.com/dvhb/react-native-template-dvhb/commit/772453f20c4c5168baddf3c1add7e42899eab389))
+
+## [1.0.8](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.7...v1.0.8) (2020-01-16)
+
+
+### Bug Fixes
+
+* **package:** update react-navigation to v4 ([ccf501f](https://github.com/dvhb/react-native-template-dvhb/commit/ccf501fdc44a85cd3acdbff7dc1eac67d26be8e1))
+
+## [1.0.7](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.6...v1.0.7) (2020-01-16)
+
+
+### Bug Fixes
+
+* **package:** freeze typesafe-actions v4 ([020d5d9](https://github.com/dvhb/react-native-template-dvhb/commit/020d5d971dd5200d0c1081d96285ba4cbdfcc7a1))
+
 ## [1.0.6](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.5...v1.0.6) (2020-01-16)
 
 
