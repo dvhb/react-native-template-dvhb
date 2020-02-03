@@ -1,3 +1,12 @@
+## [1.0.10](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.9...v1.0.10) (2020-02-03)
+
+
+### Bug Fixes
+
+* **package:** update react-navigation-stack to version 2.1.0 ([0d97166](https://github.com/dvhb/react-native-template-dvhb/commit/0d97166767de2a3878d68279e4e0c0618b59c6ad))
+* update test action format ([55690ab](https://github.com/dvhb/react-native-template-dvhb/commit/55690ab4b5e707e59599d23c87b3212db24c12a1))
+* **package:** try update typesafe-actions v5 ([4eeaa7a](https://github.com/dvhb/react-native-template-dvhb/commit/4eeaa7a5eddd60af38a732c3331140d19024c6a0))
+
 ## [1.0.9](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.8...v1.0.9) (2020-01-17)
 
 
