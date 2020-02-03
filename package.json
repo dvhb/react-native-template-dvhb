@@ -1,16 +1,6 @@
 {
   "name": "@dvhb/template-react-native",
   "version": "1.0.10",
-  "license": "MIT",
-  "author": "Aleksey Subbotenko <asu@dvhb.ru>",
-  "homepage": "https://github.com/dvhb/react-native-template-dvhb#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dvhb/react-native-template-dvhb.git"
-  },
-  "bugs": {
-    "url": "https://github.com/dvhb/react-native-template-dvhb/issues"
-  },
   "keywords": [
     "react-native",
     "typescript",
@@ -18,27 +8,37 @@
     "template",
     "boilerplate"
   ],
+  "homepage": "https://github.com/dvhb/react-native-template-dvhb#readme",
+  "bugs": {
+    "url": "https://github.com/dvhb/react-native-template-dvhb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvhb/react-native-template-dvhb.git"
+  },
+  "license": "MIT",
+  "author": "Aleksey Subbotenko <asu@dvhb.ru>",
   "files": [
     "template",
     "template.config.js"
   ],
+  "scripts": {
+    "semantic-release": "semantic-release",
+    "test": "cd template && npm ci && npm run tsc && npm run lint"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "@semantic-release/git": "^9.0.0",
     "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
     "husky": "^4.0.10",
     "semantic-release": "^17.0.0"
-  },
-  "dependencies": {},
-  "scripts": {
-    "semantic-release": "semantic-release",
-    "test": "cd template && npm ci && npm run tsc && npm run lint"
   },
   "release": {
     "plugins": [

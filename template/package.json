@@ -3,22 +3,51 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start",
-    "storybook": "IS_STORYBOOK=true npm start",
-    "storybook-server": "start-storybook",
     "android": "react-native run-android",
+    "pregenerate:api": "curl https://petstore.swagger.io/v2/swagger.json > api-schema.yaml",
+    "generate:api": "rimraf src/api/** && openapi-generator generate -i api-schema.yaml -g typescript-fetch --model-name-prefix I -o ./src/api -p modelPropertyNaming=original",
+    "icons": "dvhb-icons generate -n -i src/ui/Icon/src -c src/ui/Icon/components",
+    "icons:figma2svg": "dvhb-icons figma2svg -i src/ui/Icon/src",
     "ios": "react-native run-ios",
     "ios:release": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
-    "test": "jest",
     "lint": "tslint -p tsconfig.json -c tslint.json -t verbose",
-    "tsc": "tsc",
-    "generate:api": "rimraf src/api/** && openapi-generator generate -i api-schema.yaml -g typescript-fetch --model-name-prefix I -o ./src/api -p modelPropertyNaming=original",
-    "pregenerate:api": "curl https://petstore.swagger.io/v2/swagger.json > api-schema.yaml",
-    "prestorybook": "rnstl",
     "messages": "messages extract",
     "messages:clean": "messages clean",
-    "icons": "dvhb-icons generate -n -i src/ui/Icon/src -c src/ui/Icon/components",
-    "icons:figma2svg": "dvhb-icons figma2svg -i src/ui/Icon/src"
+    "start": "react-native start",
+    "prestorybook": "rnstl",
+    "storybook": "IS_STORYBOOK=true npm start",
+    "storybook-server": "start-storybook",
+    "test": "jest",
+    "tsc": "tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && tsc --noEmit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{json,md,graphql}": [
+      "prettier --write",
+      "git add --force"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "git add --force"
+    ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src",
+        "./storybook"
+      ],
+      "pattern": "**/*.stories.tsx",
+      "outputFile": "./storybook/storyLoader.js"
+    }
+  },
+  "jest": {
+    "preset": "react-native"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.1",
@@ -80,38 +109,9 @@
     "tslint": "^5.19.0",
     "typescript": "3.7.4"
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "tslint --fix",
-      "git add --force"
-    ],
-    "*.{json,md,graphql}": [
-      "prettier --write",
-      "git add --force"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && tsc --noEmit",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "config": {
-    "react-native-storybook-loader": {
-      "searchDir": [
-        "./src",
-        "./storybook"
-      ],
-      "pattern": "**/*.stories.tsx",
-      "outputFile": "./storybook/storyLoader.js"
-    }
-  },
   "messages": {
     "messagesDir": "src/messages",
     "langs": "ru",
     "pattern": "src/**/*.{ts,tsx}"
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }
