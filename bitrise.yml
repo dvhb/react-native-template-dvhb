@@ -1,0 +1,110 @@
+---
+format_version: '8'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: react-native
+trigger_map:
+- push_branch: "*"
+  workflow: primary
+- pull_request_source_branch: "*"
+  workflow: primary
+workflows:
+  primary:
+    steps:
+    - activate-ssh-key@4.0.3:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4.0.17: {}
+    - script@1.1.5:
+        title: Move app from template to root directory
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            rsync -va --delete-after ./template/ .
+    - script@1.1.5:
+        title: React Native install node dependencies
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            # fail if any commands fails
+            set -e
+
+            node -v
+            mv .env.example .env
+            npm ci
+    - script@1.1.5:
+        title: android build scripts
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            set -e
+            npx jetify
+    - file-downloader@1.0.1:
+        inputs:
+        - destination: "$BITRISEIO_ANDROID_KEYSTORE_FILE"
+        - source: "$BITRISEIO_ANDROID_KEYSTORE_URL"
+    - gradle-runner@1.9.0:
+        inputs:
+        - gradle_file: android/build.gradle
+        - gradlew_path: "./android/gradlew"
+        - gradle_task: assembleRelease
+#    - google-play-deploy:
+#        inputs:
+#        - service_account_json_key_path: "$BITRISEIO_release_URL"
+#        - package_name: com.dvhb.template-react-native
+    - deploy-to-bitrise-io@1.7.1: {}
+    - script@1.1.5:
+        title: ios build scripts
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            set -e
+            npm run ios:release
+    - set-ios-version@2.0.0:
+        inputs:
+        - bundle_version: "$BITRISE_BUILD_NUMBER"
+        - info_plist_file: ios/DvhbApp/Info.plist
+    - certificate-and-profile-installer@1.10.1: {}
+    - recreate-user-schemes@1.0.2:
+        inputs:
+        - project_path: "$IOS_PROJECT_PATH"
+    - cocoapods-install@1.8.0: {}
+    - ios-auto-provision@1.5.2:
+        inputs:
+        - team_id: "$IOS_TEAM_ID"
+        - configuration: Release
+        - generate_profiles: 'yes'
+        - project_path: "$IOS_PROJECT_PATH"
+        - scheme: "$IOS_SCHEME"
+        - distribution_type: "$IOS_EXPORT_METHOD"
+    - xcode-archive@2.7.1:
+        inputs:
+        - project_path: "$IOS_PROJECT_PATH"
+        - export_method: "$IOS_EXPORT_METHOD"
+        - scheme: "$IOS_SCHEME"
+        - team_id: "$IOS_TEAM_ID"
+        - compile_bitcode: 'no'
+        - configuration: Release
+    - deploy-to-itunesconnect-deliver@2.17.0:
+        inputs:
+        - password: "$passwrd"
+        - team_id: "$IOS_TEAM_ID"
+        - app_id: '1495295660'
+        - bundle_id: com.dvhb.template-react-native
+        - team_name: Aleksey Subbotenko
+        - itunescon_user: "$login"
+app:
+  envs:
+  - opts:
+      is_expand: false
+    IOS_PROJECT_PATH: ios/DvhbApp.xcworkspace
+  - opts:
+      is_expand: false
+    IOS_SCHEME: DvhbApp
+  - opts:
+      is_expand: false
+    IOS_EXPORT_METHOD: app-store
+  - opts:
+      is_expand: false
+    IOS_TEAM_ID: 3REV5DK8SJ
+  - opts:
+      is_expand: false
+    ANDROID_KEYSTORE_FILE: "/Users/vagrant/git/android/app/release.keystore"
