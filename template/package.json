@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android:release": "react-native bundle --entry-file index.js --platform android --dev false --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "pregenerate:api": "curl https://petstore.swagger.io/v2/swagger.json > api-schema.yaml",
     "generate:api": "rimraf src/api/** && openapi-generator generate -i api-schema.yaml -g typescript-fetch --model-name-prefix I -o ./src/api -p modelPropertyNaming=original",
     "icons": "dvhb-icons generate -n -i src/ui/Icon/src -c src/ui/Icon/components",
@@ -61,6 +62,7 @@
     "react-native-iphone-x-helper": "^1.2.1",
     "react-native-reanimated": "^1.3.0",
     "react-native-safe-area-context": "^0.6.4",
+    "react-native-screens": "^2.0.0-alpha.34",
     "react-native-svg": "^10.1.0",
     "react-navigation": "^4.0.10",
     "react-navigation-drawer": "^2.3.3",
