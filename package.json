@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "semantic-release": "semantic-release",
-    "test": "cd template && npm ci && npm run tsc && npm run lint"
+    "test": "cd template && npm ci && npm run tsc && npm run lint && npm run ios:release"
   },
   "husky": {
     "hooks": {
