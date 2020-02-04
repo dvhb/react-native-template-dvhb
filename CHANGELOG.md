@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.10...v1.0.11) (2020-02-03)
+
+
+### Bug Fixes
+
+* update to react-navigation-stack@2.1.0 ([75d6f53](https://github.com/dvhb/react-native-template-dvhb/commit/75d6f531bd3e4c5b3eb11396bfc8a86f7c4af6d6))
+
 ## [1.0.10](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.9...v1.0.10) (2020-02-03)
 
 
