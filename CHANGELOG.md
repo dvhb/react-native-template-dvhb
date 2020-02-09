@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.12...v1.0.13) (2020-02-09)
+
+
+### Bug Fixes
+
+* **package:** update react-native-safe-area-context to version 0.7.0 ([0ead513](https://github.com/dvhb/react-native-template-dvhb/commit/0ead513cdcbd6962709646123ed57e51c9b716f4))
+
 ## [1.0.12](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.11...v1.0.12) (2020-02-04)
 
 
