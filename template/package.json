@@ -75,7 +75,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.8.6",
-    "@babel/runtime": "7.8.3",
+    "@babel/runtime": "7.8.4",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@dvhb/icons": "^1.2.2",
