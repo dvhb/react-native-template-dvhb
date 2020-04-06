@@ -4,6 +4,7 @@ import { Text } from 'react-native';
 import { IntlProvider } from 'react-intl';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { PersistGate } from 'redux-persist/integration/react';
+import SplashScreen from 'react-native-splash-screen';
 
 import { persistor, store } from '../store/configureStore';
 import en from '../messages/en.json';
@@ -17,6 +18,10 @@ const translations = {
 };
 
 export class Setup extends React.Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  }
+
   onBeforeLift() {
     apiUser.init();
   }
