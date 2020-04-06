@@ -40,7 +40,11 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera access required for publishing.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone access required for publishing.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>FuturaNewBold-Reg.ttf</string>

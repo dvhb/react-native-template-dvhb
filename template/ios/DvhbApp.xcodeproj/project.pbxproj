@@ -22,6 +22,16 @@
 		74159C661383F49BEC076A48 /* libPods-DvhbApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 086165E1ED51ED419F2697EC /* libPods-DvhbApp-tvOS.a */; };
 		857F7A07451B112C975E9C13 /* libPods-DvhbApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB85D0CA8D122CCF3D152D4B /* libPods-DvhbApp.a */; };
 		E55A15E5536B4BAFBC750EFB /* FuturaNewBold-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89495DCBBDFB44AE9C3D510D /* FuturaNewBold-Reg.ttf */; };
+		FD861EC8243B6AC100B0C47F /* R5Streaming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861EC7243B6AC100B0C47F /* R5Streaming.framework */; };
+		FD861ECA243B6CAD00B0C47F /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861EC9243B6C7F00B0C47F /* libc++.1.tbd */; };
+		FD861ECC243B6CC400B0C47F /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861ECB243B6CB900B0C47F /* libiconv.2.4.0.tbd */; };
+		FD861ECE243B6CD200B0C47F /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861ECD243B6CCF00B0C47F /* libbz2.tbd */; };
+		FD861ED0243B6CDF00B0C47F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861ECF243B6CDB00B0C47F /* libz.tbd */; };
+		FD861ED2243B6CF000B0C47F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861ED1243B6CF000B0C47F /* GLKit.framework */; };
+		FD861ED4243B6CF900B0C47F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861ED3243B6CF900B0C47F /* QuartzCore.framework */; };
+		FD861ED6243B6D0100B0C47F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861ED5243B6D0100B0C47F /* OpenAL.framework */; };
+		FD861ED8243B6D0B00B0C47F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861ED7243B6D0B00B0C47F /* CoreFoundation.framework */; };
+		FD861EDA243B6D1200B0C47F /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD861ED9243B6D1200B0C47F /* VideoToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +81,16 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FBA43F236DBDB3103698EE53 /* Pods-DvhbApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DvhbApp-tvOSTests/Pods-DvhbApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD861EC7243B6AC100B0C47F /* R5Streaming.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = R5Streaming.framework; path = Frameworks/R5Streaming.framework; sourceTree = "<group>"; };
+		FD861EC9243B6C7F00B0C47F /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		FD861ECB243B6CB900B0C47F /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		FD861ECD243B6CCF00B0C47F /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		FD861ECF243B6CDB00B0C47F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FD861ED1243B6CF000B0C47F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		FD861ED3243B6CF900B0C47F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FD861ED5243B6D0100B0C47F /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		FD861ED7243B6D0B00B0C47F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		FD861ED9243B6D1200B0C47F /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +106,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD861ED8243B6D0B00B0C47F /* CoreFoundation.framework in Frameworks */,
+				FD861ED4243B6CF900B0C47F /* QuartzCore.framework in Frameworks */,
+				FD861ECC243B6CC400B0C47F /* libiconv.2.4.0.tbd in Frameworks */,
+				FD861EDA243B6D1200B0C47F /* VideoToolbox.framework in Frameworks */,
+				FD861ED0243B6CDF00B0C47F /* libz.tbd in Frameworks */,
+				FD861ECE243B6CD200B0C47F /* libbz2.tbd in Frameworks */,
+				FD861EC8243B6AC100B0C47F /* R5Streaming.framework in Frameworks */,
+				FD861ED2243B6CF000B0C47F /* GLKit.framework in Frameworks */,
+				FD861ED6243B6D0100B0C47F /* OpenAL.framework in Frameworks */,
 				857F7A07451B112C975E9C13 /* libPods-DvhbApp.a in Frameworks */,
+				FD861ECA243B6CAD00B0C47F /* libc++.1.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +173,16 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD861ED9243B6D1200B0C47F /* VideoToolbox.framework */,
+				FD861ED7243B6D0B00B0C47F /* CoreFoundation.framework */,
+				FD861ED5243B6D0100B0C47F /* OpenAL.framework */,
+				FD861ED3243B6CF900B0C47F /* QuartzCore.framework */,
+				FD861ED1243B6CF000B0C47F /* GLKit.framework */,
+				FD861ECF243B6CDB00B0C47F /* libz.tbd */,
+				FD861ECD243B6CCF00B0C47F /* libbz2.tbd */,
+				FD861ECB243B6CB900B0C47F /* libiconv.2.4.0.tbd */,
+				FD861EC9243B6C7F00B0C47F /* libc++.1.tbd */,
+				FD861EC7243B6AC100B0C47F /* R5Streaming.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				DB85D0CA8D122CCF3D152D4B /* libPods-DvhbApp.a */,
@@ -648,6 +688,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 3REV5DK8SJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = DvhbApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.0;
@@ -669,6 +713,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3REV5DK8SJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = DvhbApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.0;
@@ -822,6 +870,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -875,6 +924,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
