@@ -62,7 +62,7 @@
     "react-native-iphone-x-helper": "^1.2.1",
     "react-native-permissions": "^2.0.10",
     "react-native-reanimated": "^1.3.0",
-    "react-native-red5pro": "https://github.com/infrared5/react-native-red5pro/archive/v6.0.0-RC.tar.gz",
+    "react-native-red5pro": "https://github.com/dvhb/react-native-red5pro/tarball/dev",
     "react-native-safe-area-context": "^0.7.0",
     "react-native-screens": "^2.0.0-alpha.34",
     "react-native-splash-screen": "^3.2.0",
