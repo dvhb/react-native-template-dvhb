@@ -60,7 +60,6 @@ export class Red5Test1Container extends React.Component<Props, any> {
     const publisherStream = navigation.getParam('publisherStream');
     const subscriberStream = navigation.getParam('subscriberStream');
 
-    console.info({ publisherStream, subscriberStream });
     return (
       <Red5Test1
         publisherStream={publisherStream}
