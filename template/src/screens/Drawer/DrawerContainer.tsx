@@ -1,16 +1,30 @@
-import React from 'react';
-import { ScrollView, SafeAreaView } from 'react-native';
+import React, { useCallback } from 'react';
+import { connect } from 'react-redux';
+import { NavigationStackScreenProps } from 'react-navigation-stack';
 
 import { Drawer } from './Drawer';
 
-type Props = {};
+type Params = {};
+type Props = {} & NavigationStackScreenProps<Params> & ReturnType<typeof mapStateToProps>;
 
-export function DrawerContainer({}: Props) {
-  return (
-    <SafeAreaView>
-      <ScrollView>
-        <Drawer />
-      </ScrollView>
-    </SafeAreaView>
+const mapStateToProps = () => ({});
+
+function DrawerContainerPure({ navigation }: Props) {
+  const handleRed5Test1 = useCallback(
+    () => navigation.navigate('red5test1', { subscriberStream: [], publisherStream: ['stream1'] }),
+    [],
   );
+  const handleRed5Test2 = useCallback(
+    () => navigation.navigate('red5test1', { subscriberStream: ['stream1'], publisherStream: ['stream2'] }),
+    [],
+  );
+
+  const handleRed5Test3 = useCallback(
+    () => navigation.navigate('red5test1', { subscriberStream: ['stream1', 'stream2'], publisherStream: [] }),
+    [],
+  );
+
+  return <Drawer onRed5Test1={handleRed5Test1} onRed5Test2={handleRed5Test2} onRed5Test3={handleRed5Test3} />;
 }
+
+export const DrawerContainer = connect(mapStateToProps)(DrawerContainerPure);

@@ -9,7 +9,7 @@ import {
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
-import { DrawerContainer, SubscriberContainer } from '../screens';
+import { DrawerContainer, Red5Test1Container } from '../screens';
 
 export const navigationWithDrawer = (
   config: CreateNavigatorConfig<{}, NavigationSwitchRouterConfig, {}, NavigationSwitchProp>,
@@ -20,13 +20,13 @@ export const navigationWithDrawer = (
         {
           App: createStackNavigator(
             {
-              home: SubscriberContainer,
+              red5test1: Red5Test1Container,
             },
             { headerMode: 'none' },
           ),
         },
         {
-          contentComponent: DrawerContainer as FunctionComponent,
+          contentComponent: (DrawerContainer as unknown) as FunctionComponent,
           overlayColor: 'rgba(0, 0, 0, 0.25)',
           drawerPosition: 'right',
           drawerWidth: Dimensions.get('screen').width * 0.8,

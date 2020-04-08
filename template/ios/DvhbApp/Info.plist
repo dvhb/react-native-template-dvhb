@@ -39,12 +39,14 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera access required for publishing.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Microphone access required for publishing.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo library access required for publishing.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>FuturaNewBold-Reg.ttf</string>

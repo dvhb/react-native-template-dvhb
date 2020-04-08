@@ -3,4 +3,4 @@ import { storiesOf } from '@storybook/react-native';
 
 import { Subscriber } from './Subscriber';
 
-storiesOf('Screens|Subscriber', module).add('default', () => <Subscriber />);
+storiesOf('Subscriber', module).add('default', () => <Subscriber streamName="stream1" />);

@@ -1,7 +1,7 @@
 // tslint:disable:max-file-line-count
 // @ts-nocheck
 import React from 'react';
-import { AppState, findNodeHandle, Button, Image, StyleSheet, Text, View } from 'react-native';
+import { AppState, findNodeHandle, Text, View } from 'react-native';
 import {
   R5VideoView,
   R5ScaleMode,
@@ -11,61 +11,21 @@ import {
   setPlaybackVolume,
 } from 'react-native-red5pro';
 
+import { styles } from './styles';
+import { streamConfig } from '../../../services/red5pro';
+import { Btn } from '../../../ui';
+
 const isValidStatusMessage = (value: any) => {
   return value && typeof value !== 'undefined' && value !== 'undefined' && value !== 'null';
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    justifyContent: 'center',
-  },
-  videoView: {
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: 'black',
-  },
-  imageContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: 'black',
-  },
-  button: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    height: 40,
-    backgroundColor: 'blue',
-    color: 'white',
-  },
-  toast: {
-    color: 'white',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    padding: 10,
-    textAlign: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 1.0)',
-  },
-  muteIcon: {
-    position: 'absolute',
-    top: 10,
-    right: 10,
-    padding: 6,
-    paddingLeft: 10,
-    paddingRight: 10,
-    borderRadius: 26,
-    backgroundColor: 'white',
-  },
-  muteIconToggled: {
-    backgroundColor: '#2089dc',
-  },
-});
+type Props = {
+  streamName: string;
+};
 
-export class Subscriber extends React.Component<any, any> {
+type State = {};
+
+export class Subscriber extends React.Component<Props, State> {
   private red5proVideoSubscriber: any;
   private toastField: any;
   private retryTimer: any;
@@ -87,6 +47,9 @@ export class Subscriber extends React.Component<any, any> {
     this.startRetry = this.startRetry.bind(this);
     this.stopRetry = this.stopRetry.bind(this);
 
+    this.assignVideoRef = this.assignVideoRef.bind(this);
+    this.assignToastRef = this.assignToastRef.bind(this);
+
     this.state = {
       appState: AppState.currentState,
       scaleMode: R5ScaleMode.SCALE_TO_FILL,
@@ -94,9 +57,6 @@ export class Subscriber extends React.Component<any, any> {
       isInErrorState: false,
       isConnecting: false,
       isDisconnected: true,
-      buttonProps: {
-        style: styles.button,
-      },
       toastProps: {
         style: styles.toast,
         value: 'waiting...',
@@ -111,13 +71,11 @@ export class Subscriber extends React.Component<any, any> {
     };
   }
 
-  componentWillMount() {
-    console.info('Subscriber:componentWillMount()');
+  componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange);
   }
 
   componentWillUnmount() {
-    console.info('Subscriber:componentWillUnmount()');
     this.stopRetry();
     AppState.removeEventListener('change', this._handleAppStateChange);
     this.doUnsubscribe();
@@ -125,72 +83,47 @@ export class Subscriber extends React.Component<any, any> {
 
   _handleAppStateChange = (nextAppState: any) => {
     console.info(`Subscriber:AppState - ${nextAppState}`);
-    const {
-      streamProps: { enableBackgroundStreaming },
-    } = this.props;
     if (this.state.appState.match(/inactive|background/) && nextAppState === 'active') {
       console.info('Subscriber:AppState - App has come to the foreground.');
     } else if (nextAppState === 'inactive') {
       console.info('Subscriber:AppState - App has gone to the background.');
-      if (!enableBackgroundStreaming) {
-        console.info('Subscriber:AppState - unpublish()');
-        this.doUnsubscribe();
-      }
+      // if (!enableBackgroundStreaming) {
+      console.info('Subscriber:AppState - unpublish()');
+      this.doUnsubscribe();
+      // }
     }
     this.setState({
       appState: nextAppState,
     });
   };
 
+  assignVideoRef(video) {
+    this.red5pro_video_publisher = video;
+  }
+  assignToastRef(toast) {
+    this.toast_field = toast;
+  }
+
   render() {
-    const { videoProps, toastProps, buttonProps, audioMuted, isDisconnected } = this.state;
-
-    const { onStop, streamProps } = this.props;
-
-    const setup = Object.assign({}, streamProps, videoProps);
-
-    const displayVideo = setup.subscribeVideo;
-
-    const audioIconColor = audioMuted ? '#fff' : '#000';
-    const audioIconStyle = audioMuted ? [styles.muteIcon, styles.muteIconToggled] : styles.muteIcon;
-
-    const assignVideoRef = (video: any) => {
-      this.red5proVideoSubscriber = video;
-    };
-    const assignToastRef = (toast: any) => {
-      this.toastField = toast;
-    };
+    const { videoProps, toastProps, isDisconnected } = this.state;
+    const { streamName, actions } = this.props;
+    const setup = Object.assign({}, streamConfig(streamName), videoProps);
 
     return (
       <View style={styles.container}>
-        {/* tslint:disable-next-line:jsx-no-bind */}
-        <R5VideoView {...setup} ref={assignVideoRef.bind(this)} />
-        {!displayVideo && (
-          <View style={styles.imageContainer}>
-            <Image
-              style={{ width: 69, height: 68 }}
-              source={{ uri: 'https://www.red5pro.com/images/red5pro_icon1.png' }}
-            />
+        <R5VideoView {...setup} ref={this.assignVideoRef} />
+        {actions && (
+          <View style={styles.buttonContainer}>
+            <Text ref={this.assignToastRef} {...toastProps}>
+              {toastProps.value}
+            </Text>
+            {isDisconnected && (
+              <Btn onPress={this.startRetry} small bordered>
+                Resubscribe
+              </Btn>
+            )}
           </View>
         )}
-        {/*<Icon*/}
-        {/*  name={audioMuted ? 'md-volume-off' : 'md-volume-high'}*/}
-        {/*  type="ionicon"*/}
-        {/*  size={26}*/}
-        {/*  color={audioIconColor}*/}
-        {/*  hitSlop={{ left: 10, top: 10, right: 10, bottom: 10 }}*/}
-        {/*  onPress={this.onToggleAudioMute}*/}
-        {/*  containerStyle={audioIconStyle}*/}
-        {/*/>*/}
-        {/* tslint:disable-next-line:jsx-no-bind */}
-        <Text ref={assignToastRef.bind(this)} {...toastProps}>
-          {toastProps.value}
-        </Text>
-        {isDisconnected && (
-          <Button {...buttonProps} onPress={this.startRetry} title="Resubscribe" accessibilityLabel="Resubscribe" />
-        )}
-        <Button {...buttonProps} onPress={onStop} title="Stop" accessibilityLabel="Stop" />
-        <Button {...buttonProps} onPress={this.onScaleMode} title="Swap Scale" accessibilityLabel="Swap Scale" />
       </View>
     );
   }
@@ -263,11 +196,7 @@ export class Subscriber extends React.Component<any, any> {
   }
 
   doSubscribe() {
-    const {
-      streamProps: {
-        configuration: { streamName },
-      },
-    } = this.props;
+    const { streamName } = this.props;
     const nodeHandle = findNodeHandle(this.red5proVideoSubscriber);
     if (nodeHandle) {
       subscribe(findNodeHandle(this.red5proVideoSubscriber), streamName);
@@ -294,11 +223,7 @@ export class Subscriber extends React.Component<any, any> {
   }
 
   retry() {
-    const {
-      streamProps: {
-        configuration: { streamName },
-      },
-    } = this.props;
+    const { streamName } = this.props;
 
     console.info(`attempting retry for stream name :: ${streamName}`);
     subscribe(findNodeHandle(this.red5proVideoSubscriber), streamName);
