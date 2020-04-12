@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import { AppState, findNodeHandle, SafeAreaView, Text, View } from 'react-native';
-import { R5VideoView, publish, unpublish, swapCamera } from 'react-native-red5pro';
+import { R5VideoView, publish, unpublish, swapCamera, muteAudio } from 'react-native-red5pro';
 
 import { styles } from './styles';
 import { streamConfig } from '../../../services/red5pro';
@@ -94,6 +94,7 @@ export class Publisher extends React.Component<Props, State> {
 
     console.info(`Publisher:onConfigured :: ${event.nativeEvent.key}`);
     publish(findNodeHandle(this.red5pro_video_publisher), streamName);
+    muteAudio(findNodeHandle(this.red5pro_video_publisher));
   }
 
   onPublisherStreamStatus(event) {

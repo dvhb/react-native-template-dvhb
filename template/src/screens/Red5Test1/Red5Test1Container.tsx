@@ -2,6 +2,8 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { NavigationStackScreenProps } from 'react-navigation-stack';
 import { check, request, PERMISSIONS } from 'react-native-permissions';
+import 'react-native-get-random-values';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Red5Test1 } from './Red5Test1';
 
@@ -57,8 +59,10 @@ export class Red5Test1Container extends React.Component<Props, any> {
   render() {
     const { navigation } = this.props;
     const { hasPermissions } = this.state;
-    const publisherStream = navigation.getParam('publisherStream');
-    const subscriberStream = navigation.getParam('subscriberStream');
+
+    const stream = `stream${uuidv4()}`;
+    const publisherStream = navigation.getParam('publisherStream') || [stream];
+    const subscriberStream = navigation.getParam('subscriberStream') || [];
 
     return (
       <Red5Test1
