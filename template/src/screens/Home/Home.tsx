@@ -1,98 +1,220 @@
-import React, { Fragment } from 'react';
-import { SafeAreaView, ScrollView, View, Text, StatusBar } from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import React, { Component } from 'react';
 import EStyleSheet from 'react-native-extended-stylesheet';
+import { View, TouchableOpacity } from 'react-native';
+import { TwilioVideoLocalView, TwilioVideoParticipantView, TwilioVideo } from 'react-native-twilio-video-webrtc';
+
+import { Text, Input, Btn, Aligner, Spacer } from '../../ui';
 
 type Props = {};
+type State = {
+  isAudioEnabled: boolean;
+  isVideoEnabled: boolean;
+  status: string;
+  participants: Map<any, any>;
+  videoTracks: Map<any, any>;
+  roomName: string;
+  token: string;
+};
 
-export function Home({}: Props) {
-  const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
+export class Home extends Component<Props, State> {
+  private twilioRef: any;
 
-  return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
-          <Header />
-          {!usingHermes ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
+  state = {
+    isAudioEnabled: true,
+    isVideoEnabled: true,
+    status: 'disconnected',
+    participants: new Map(),
+    videoTracks: new Map(),
+    roomName: '',
+    token: '',
+  };
+
+  _onConnectButtonPress = () => {
+    try {
+      this.twilioRef.connect({
+        roomName: this.state.roomName,
+        accessToken: this.state.token,
+      });
+    } catch (error) {
+      console.info(error);
+    }
+
+    this.setState({ status: 'connecting' });
+  };
+
+  _onEndButtonPress = () => {
+    this.twilioRef.disconnect();
+  };
+
+  _onMuteButtonPress = () => {
+    this.twilioRef
+      .setLocalAudioEnabled(!this.state.isAudioEnabled)
+      .then((isEnabled: any) => this.setState({ isAudioEnabled: isEnabled }));
+  };
+
+  _onFlipButtonPress = () => {
+    this.twilioRef.flipCamera();
+  };
+
+  _onRoomDidConnect = () => {
+    this.setState({ status: 'connected' });
+  };
+
+  _onRoomDidDisconnect = ({ error }: { error: any }) => {
+    console.info('ERROR: ', error);
+    this.setState({ status: 'disconnected' });
+  };
+
+  _onRoomDidFailToConnect = ({ error }: { error: any }) => {
+    console.info('ERROR: ', error);
+    this.setState({ status: 'disconnected' });
+  };
+
+  _onParticipantAddedVideoTrack = ({ participant, track }: { participant: any; track: any }) => {
+    console.info('onParticipantAddedVideoTrack: ', participant, track);
+
+    this.setState({
+      videoTracks: new Map([
+        ...this.state.videoTracks,
+        [track.trackSid, { participantSid: participant.sid, videoTrackSid: track.trackSid }],
+      ]),
+    });
+  };
+
+  _onParticipantRemovedVideoTrack = ({ participant, track }: { participant: any; track: any }) => {
+    console.info('onParticipantRemovedVideoTrack: ', participant, track);
+
+    const videoTracks = this.state.videoTracks;
+    videoTracks.delete(track.trackSid);
+
+    this.setState({ videoTracks: new Map([...videoTracks]) });
+  };
+
+  _onChangeRoom = () => (roomName: string) => {
+    this.setState({ roomName });
+  };
+
+  _onChangeToken = () => (token: string) => {
+    this.setState({ token });
+  };
+
+  setTwilioRef = (ref: any) => {
+    this.twilioRef = ref;
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        {this.state.status === 'disconnected' && (
+          <Aligner.Center>
+            <Spacer margin="lg">
+              <Text size="large">Twilio Webrtc</Text>
+            </Spacer>
+            <Spacer>
+              <Input placeholder="room" onChange={this._onChangeRoom} value={this.state.roomName} />
+            </Spacer>
+            <Spacer>
+              <Input placeholder="access token" onChange={this._onChangeToken} value={this.state.token} />
+            </Spacer>
+            <Btn onPress={this._onConnectButtonPress}>Connect</Btn>
+          </Aligner.Center>
+        )}
+
+        {this.state.status === 'connected' || this.state.status === 'connecting' ? (
+          <View style={styles.callContainer}>
+            {this.state.status === 'connected' && (
+              <View style={styles.remoteGrid}>
+                {Array.from(this.state.videoTracks, ([trackSid, trackIdentifier]) => {
+                  return (
+                    <TwilioVideoParticipantView
+                      style={styles.remoteVideo}
+                      key={trackSid}
+                      trackIdentifier={trackIdentifier}
+                    />
+                  );
+                })}
+              </View>
+            )}
+            <View style={styles.optionsContainer}>
+              <TouchableOpacity style={styles.optionButton} onPress={this._onEndButtonPress}>
+                <Text color="$black">End</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.optionButton} onPress={this._onMuteButtonPress}>
+                <Text color="$black">{this.state.isAudioEnabled ? 'Mute' : 'Unmute'}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.optionButton} onPress={this._onFlipButtonPress}>
+                <Text color="$black">Flip</Text>
+              </TouchableOpacity>
+              <TwilioVideoLocalView enabled style={styles.localVideo} />
+              <View />
             </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>Home.tsx</Text> to change this screen and then come back to see your
-                edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>Read the docs to discover what to do next:</Text>
-            </View>
-            <LearnMoreLinks />
           </View>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
-  );
+        ) : null}
+
+        <TwilioVideo
+          ref={this.setTwilioRef}
+          onRoomDidConnect={this._onRoomDidConnect}
+          onRoomDidDisconnect={this._onRoomDidDisconnect}
+          onRoomDidFailToConnect={this._onRoomDidFailToConnect}
+          onParticipantAddedVideoTrack={this._onParticipantAddedVideoTrack}
+          onParticipantRemovedVideoTrack={this._onParticipantRemovedVideoTrack}
+        />
+      </View>
+    );
+  }
 }
 
 const styles = EStyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 1,
+    backgroundColor: '$white',
   },
-  engine: {
+  callContainer: {
+    backgroundColor: '$black',
+    flex: 1,
     position: 'absolute',
+    bottom: 0,
+    top: 0,
+    left: 0,
     right: 0,
   },
-  body: {
-    backgroundColor: Colors.white,
+  localVideo: {
+    flex: 1,
+    width: 125,
+    height: 200,
+    position: 'absolute',
+    right: 0,
+    bottom: 400,
+    borderRadius: 2,
+    borderColor: '#4e4e4e',
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  remoteGrid: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
+  remoteVideo: {
+    width: '100%',
+    height: '100%',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
+  optionsContainer: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    right: 0,
+    height: 100,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  optionButton: {
+    width: 60,
+    height: 60,
+    marginLeft: 10,
+    marginRight: 10,
+    borderRadius: 100 / 2,
+    backgroundColor: '$white',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
