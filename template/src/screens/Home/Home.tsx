@@ -90,11 +90,11 @@ export class Home extends Component<Props, State> {
     this.setState({ videoTracks: new Map([...videoTracks]) });
   };
 
-  _onChangeRoom = () => (roomName: string) => {
+  _onChangeRoom = (roomName: string) => {
     this.setState({ roomName });
   };
 
-  _onChangeToken = () => (token: string) => {
+  _onChangeToken = (token: string) => {
     this.setState({ token });
   };
 
@@ -111,10 +111,20 @@ export class Home extends Component<Props, State> {
               <Text size="large">Twilio Webrtc</Text>
             </Spacer>
             <Spacer>
-              <Input placeholder="room" onChange={this._onChangeRoom} value={this.state.roomName} />
+              <Input
+                autoCapitalize="none"
+                placeholder="room"
+                onChangeText={this._onChangeRoom}
+                value={this.state.roomName}
+              />
             </Spacer>
             <Spacer>
-              <Input placeholder="access token" onChange={this._onChangeToken} value={this.state.token} />
+              <Input
+                autoCapitalize="none"
+                placeholder="access token"
+                onChangeText={this._onChangeToken}
+                value={this.state.token}
+              />
             </Spacer>
             <Btn onPress={this._onConnectButtonPress}>Connect</Btn>
           </Aligner.Center>
