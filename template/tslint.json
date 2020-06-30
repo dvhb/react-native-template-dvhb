@@ -3,5 +3,7 @@
   "linterOptions": {
     "exclude": ["**/*.js", "src/ui/Icon/components/*.tsx"]
   },
-  "rules": {}
+  "rules": {
+    "no-default-export": false
+  }
 }

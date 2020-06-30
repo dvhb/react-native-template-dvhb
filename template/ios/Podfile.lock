@@ -182,7 +182,7 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
   - React-jsinspector (0.61.5)
-  - react-native-config (1.0.0):
+  - react-native-config (1.2.1):
     - React
   - react-native-safe-area-context (0.7.0):
     - React
@@ -191,6 +191,8 @@ PODS:
   - react-native-twilio-video-webrtc (1.0.2-1):
     - React
     - TwilioVideo (~> 3.2.3)
+  - react-native-webview (10.3.2):
+    - React
   - React-RCTActionSheet (0.61.5):
     - React-Core/RCTActionSheetHeaders (= 0.61.5)
   - React-RCTAnimation (0.61.5):
@@ -262,6 +264,7 @@ DEPENDENCIES:
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-twilio-video-webrtc (from `../node_modules/react-native-twilio-video-webrtc`)
+  - react-native-webview (from `../node_modules/react-native-webview`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -323,6 +326,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-splash-screen"
   react-native-twilio-video-webrtc:
     :path: "../node_modules/react-native-twilio-video-webrtc"
+  react-native-webview:
+    :path: "../node_modules/react-native-webview"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -374,10 +379,11 @@ SPEC CHECKSUMS:
   React-jsi: cb2cd74d7ccf4cffb071a46833613edc79cdf8f7
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
-  react-native-config: 7db9b96479164dfd7b2be68eb9079e08279511c4
-  react-native-safe-area-context: f6a632b3fe4fa25b38f5119ac477163fa8803421
+  react-native-config: ae9ef3bdbf539f2d14ebaf4ebeba508f766e066a
+  react-native-safe-area-context: 190923f87d4842c908d869ac144ad395fe63a4da
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-twilio-video-webrtc: 5a1dc979bfe98c0f8dba110e9b5655d52278f862
+  react-native-webview: e2c0bce9a1a7c7edd4eb30f0c3016fce216245ce
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -388,8 +394,8 @@ SPEC CHECKSUMS:
   React-RCTText: 9ccc88273e9a3aacff5094d2175a605efa854dbe
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
-  RNCAsyncStorage: 44395cb9c7c1523104c2b499eb426ef7aff82bca
-  RNCMaskedView: a88953beefbd347a29072d9eba90e42945fe291e
+  RNCAsyncStorage: 8539fc80a0075fcc9c8e2dff84cd22dc5bf1dacf
+  RNCMaskedView: e5b99bc191945f157adeede68da9d424462de177
   RNGestureHandler: 911d3b110a7a233a34c4f800e7188a84b75319c6
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNScreens: 9d8a2900cd4f967af70dbfed74b64f77fbb6600a
@@ -399,4 +405,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1a70c7cc3c32cadfba3c456dca6a1ca82bfa11d2
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3
