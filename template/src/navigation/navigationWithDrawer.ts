@@ -9,7 +9,7 @@ import {
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
-import { HomeContainer, DrawerContainer } from '../screens';
+import { DjvidContainer, DrawerContainer } from '../screens';
 
 export const navigationWithDrawer = (
   config: CreateNavigatorConfig<{}, NavigationSwitchRouterConfig, {}, NavigationSwitchProp>,
@@ -20,7 +20,7 @@ export const navigationWithDrawer = (
         {
           App: createStackNavigator(
             {
-              home: HomeContainer,
+              djvid: DjvidContainer,
             },
             { headerMode: 'none' },
           ),
