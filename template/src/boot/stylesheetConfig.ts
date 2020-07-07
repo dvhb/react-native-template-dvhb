@@ -9,7 +9,7 @@ const colors = {
   $gray110: '#61656D',
   $black: '#000000',
   $red: '#E6174B',
-  $blue: '#00AEEF',
+  $blue: '#0055FF',
   $orange: '#FBB040',
 };
 

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { TouchableOpacity, StyleProp } from 'react-native';
+import { TouchableOpacity, StyleProp, ViewStyle } from 'react-native';
 
 import { Text } from '../Text';
 import { ColorsType } from '../../boot/stylesheetConfig';
@@ -14,7 +14,7 @@ type Props = {
   small?: boolean;
   transparent?: boolean;
   danger?: boolean;
-  style?: StyleProp<TouchableOpacity>;
+  style?: StyleProp<ViewStyle>;
   textColor?: ColorsType;
 };
 
