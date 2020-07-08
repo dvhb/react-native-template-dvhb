@@ -25,7 +25,6 @@ export const TwilioVideoParticipant: FC<Props> = ({ storybook, trackIdentifier }
 
 const styles = EStyleSheet.create({
   container: {
-    backgroundColor: '#000',
     width: '100%',
     height: '100%',
   },

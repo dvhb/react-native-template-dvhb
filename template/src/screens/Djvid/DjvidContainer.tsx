@@ -70,7 +70,6 @@ export class DjvidContainer extends Component<Props> {
   };
 
   componentDidMount(): void {
-    console.info(Config);
     fetch(`${Config.DJVID_API}/token?identity=${getUniqueIdentity()}&roomName=${Config.DJVID_ROOM}`).then(
       async response => {
         const accessToken = await response.text();

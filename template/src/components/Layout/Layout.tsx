@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, useCallback, useState } from 'react';
 import { View } from 'react-native';
 
 import { Btn, Icon } from '../../ui';
@@ -8,39 +8,49 @@ export type LayoutProps = {
   djView?: ReactNode;
   otherViews?: ReactNode[];
   localView?: ReactNode;
-  controls?: boolean;
 };
 
-export const Layout: FC<LayoutProps> = ({ controls = true, djView, otherViews, localView }) => {
+export const Layout: FC<LayoutProps> = ({ djView, otherViews, localView }) => {
+  const [isVideoEnabled, setIsVideoEnabled] = useState<boolean>(false);
+
+  const participantsLimit = isVideoEnabled ? 1 : 2;
+  const participants: ReactNode[] = [];
+
+  otherViews?.forEach((p, index) => {
+    if (index < participantsLimit) {
+      participants.push(p);
+    }
+  });
+
+  const onButtonEnableLocal = useCallback(() => {
+    setIsVideoEnabled(!isVideoEnabled);
+  }, [isVideoEnabled, setIsVideoEnabled]);
+
   return (
     <View style={styles.layout}>
       <View style={styles.djView}>{djView}</View>
 
-      {(otherViews || localView) && (
+      {(participants?.length || localView) && (
         <View style={styles.otherViews}>
-          {otherViews &&
-            otherViews.map((view, index) => (
-              <View key={index} style={styles.otherView}>
-                {view}
-              </View>
-            ))}
-          {localView && <View style={styles.otherView}>{localView}</View>}
+          {participants?.map((view, index) => (
+            <View key={index} style={styles.otherView}>
+              {view}
+            </View>
+          ))}
+          {isVideoEnabled && localView && <View style={styles.otherView}>{localView}</View>}
         </View>
       )}
-      {controls && (
-        <View style={styles.userControls}>
-          <View style={styles.userControlsItem}>
-            <Btn style={styles.userControlsButton}>
-              <Icon name="Calendar" color="$blue" height={32} width={32} />
-            </Btn>
-          </View>
-          <View style={styles.userControlsItem}>
-            <Btn style={styles.userControlsButton}>
-              <Icon name="Fav" color="$blue" height={32} width={32} />
-            </Btn>
-          </View>
+      <View style={styles.userControls}>
+        <View style={styles.userControlsItem}>
+          <Btn style={styles.userControlsButton} onPress={onButtonEnableLocal}>
+            {isVideoEnabled ? (
+              <Icon name="Camera" color="$blue" height={32} width={32} />
+            ) : (
+              <Icon name="CameraDisabled" color="$blue" height={32} width={32} />
+            )}
+          </Btn>
         </View>
-      )}
+      </View>
     </View>
   );
 };

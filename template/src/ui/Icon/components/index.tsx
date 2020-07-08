@@ -1,3 +1,5 @@
+export { default as Camera } from './Camera'
+export { default as CameraDisabled } from './CameraDisabled'
 export { default as ArrowSort } from './ArrowSort'
 export { default as Calendar } from './Calendar'
 export { default as ColoredBulletins } from './ColoredBulletins'

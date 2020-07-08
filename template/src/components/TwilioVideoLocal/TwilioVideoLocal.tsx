@@ -11,23 +11,17 @@ type Props = {
 
 export const TwilioVideoLocal: FC<Props> = ({ storybook }) => {
   return !storybook ? (
-    <TwilioVideoLocalView enabled />
+    <TwilioVideoLocalView enabled style={styles.container} />
   ) : (
-    <View style={styles.remoteVideo}>
+    <View style={styles.container}>
       <Text>fake local video</Text>
     </View>
   );
 };
 
 const styles = EStyleSheet.create({
-  localVideo: {
-    flex: 1,
-    width: 125,
-    height: 200,
-    position: 'absolute',
-    right: 0,
-    bottom: 400,
-    borderRadius: 2,
-    borderColor: '#4e4e4e',
+  container: {
+    width: '100%',
+    height: '100%',
   },
 });
