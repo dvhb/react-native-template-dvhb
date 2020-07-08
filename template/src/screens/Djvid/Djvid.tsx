@@ -16,7 +16,6 @@ export const Djvid: FC<DjvidProps> = ({ storybook = false, status, videoTracks, 
   const live = useDjvidLive();
   const djView = live?.streamId ? <EmbedVimeo streamId={live.streamId} /> : undefined;
 
-  console.info(videoTracks);
   const otherViews = videoTracks
     ? Array.from(videoTracks, ([trackSid, trackIdentifier]) => (
         <TwilioVideoParticipant storybook={storybook} key={trackSid} trackIdentifier={trackIdentifier} />

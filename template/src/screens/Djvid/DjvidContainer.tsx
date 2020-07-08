@@ -60,21 +60,17 @@ export class DjvidContainer extends Component<Props> {
     this.twilioRef = ref;
   };
 
-  _onConnect = (roomName: string, accessToken: string) => {
-    try {
-      this.twilioRef.connect({ roomName, accessToken });
-      this.setState({ status: 'connecting' });
-    } catch (error) {
-      console.info(error);
-    }
-  };
-
   componentDidMount(): void {
     fetch(`${Config.DJVID_API}/token?identity=${getUniqueIdentity()}&roomName=${Config.DJVID_ROOM}`).then(
       async response => {
         const accessToken = await response.text();
         if (accessToken) {
-          this._onConnect(Config.DJVID_ROOM, accessToken);
+          try {
+            this.twilioRef.connect({ accessToken, roomName: Config.DJVID_ROOM });
+            this.setState({ status: 'connecting' });
+          } catch (error) {
+            console.info(error);
+          }
         }
       },
     );

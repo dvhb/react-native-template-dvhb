@@ -44,9 +44,9 @@ export const Layout: FC<LayoutProps> = ({ djView, otherViews, localView }) => {
         <View style={styles.userControlsItem}>
           <Btn style={styles.userControlsButton} onPress={onButtonEnableLocal}>
             {isVideoEnabled ? (
-              <Icon name="Camera" color="$blue" height={32} width={32} />
-            ) : (
               <Icon name="CameraDisabled" color="$blue" height={32} width={32} />
+            ) : (
+              <Icon name="Camera" color="$blue" height={32} width={32} />
             )}
           </Btn>
         </View>
