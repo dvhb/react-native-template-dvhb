@@ -15,16 +15,17 @@ type Props = {
 
 export const TwilioVideoParticipant: FC<Props> = ({ storybook, trackIdentifier }) => {
   return !storybook && trackIdentifier ? (
-    <TwilioVideoParticipantView style={styles.remoteVideo} trackIdentifier={trackIdentifier} />
+    <TwilioVideoParticipantView style={styles.container} trackIdentifier={trackIdentifier} />
   ) : (
-    <View style={styles.remoteVideo}>
+    <View style={styles.container}>
       <Text>fake participant video</Text>
     </View>
   );
 };
 
 const styles = EStyleSheet.create({
-  remoteVideo: {
+  container: {
+    backgroundColor: '#000',
     width: '100%',
     height: '100%',
   },

@@ -4,6 +4,7 @@ import { getBottomSpace } from 'react-native-iphone-x-helper';
 export const styles = StyleSheet.create({
   layout: {
     flex: 1,
+    backgroundColor: '#000',
   },
   djView: {
     flex: 1,

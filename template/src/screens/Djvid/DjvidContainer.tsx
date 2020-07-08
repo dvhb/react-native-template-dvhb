@@ -71,15 +71,14 @@ export class DjvidContainer extends Component<Props> {
 
   componentDidMount(): void {
     console.info(Config);
-    fetch(`${Config.DJVID_API}/token?identity=${getUniqueIdentity()}&roomName=${Config.DJVID_ROOM}`).then(response => {
-      const accessToken = response.text();
-      if (accessToken) {
-        this._onConnect(
-          Config.DJVID_ROOM,
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTS2NhYzMwN2FmZjM1M2YyOTNiZmM4YmFmMDk1N2YxYjhjLTE1OTM1MjQyNTgiLCJncmFudHMiOnsiaWRlbnRpdHkiOiJhc3UiLCJ2aWRlbyI6eyJyb29tIjoiZGp2aWQifX0sImlhdCI6MTU5MzUyNDI1OCwiZXhwIjoxNTkzNTM4NjU4LCJpc3MiOiJTS2NhYzMwN2FmZjM1M2YyOTNiZmM4YmFmMDk1N2YxYjhjIiwic3ViIjoiQUM4NjNkNmNiNmIxMTJjNWI1Y2M0Y2Y5MjNjOTM5MzFhNiJ9.QCDvJI9aSseowPaVqVszccwcOBEk82pQMRuK1xrpcuY',
-        );
-      }
-    });
+    fetch(`${Config.DJVID_API}/token?identity=${getUniqueIdentity()}&roomName=${Config.DJVID_ROOM}`).then(
+      async response => {
+        const accessToken = await response.text();
+        if (accessToken) {
+          this._onConnect(Config.DJVID_ROOM, accessToken);
+        }
+      },
+    );
   }
 
   render() {

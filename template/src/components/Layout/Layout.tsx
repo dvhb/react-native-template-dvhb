@@ -8,9 +8,10 @@ export type LayoutProps = {
   djView?: ReactNode;
   otherViews?: ReactNode[];
   localView?: ReactNode;
+  controls?: boolean;
 };
 
-export const Layout: FC<LayoutProps> = ({ djView, otherViews, localView }) => {
+export const Layout: FC<LayoutProps> = ({ controls = true, djView, otherViews, localView }) => {
   return (
     <View style={styles.layout}>
       <View style={styles.djView}>{djView}</View>
@@ -26,18 +27,20 @@ export const Layout: FC<LayoutProps> = ({ djView, otherViews, localView }) => {
           {localView && <View style={styles.otherView}>{localView}</View>}
         </View>
       )}
-      <View style={styles.userControls}>
-        <View style={styles.userControlsItem}>
-          <Btn style={styles.userControlsButton}>
-            <Icon name="Calendar" color="$blue" height={32} width={32} />
-          </Btn>
+      {controls && (
+        <View style={styles.userControls}>
+          <View style={styles.userControlsItem}>
+            <Btn style={styles.userControlsButton}>
+              <Icon name="Calendar" color="$blue" height={32} width={32} />
+            </Btn>
+          </View>
+          <View style={styles.userControlsItem}>
+            <Btn style={styles.userControlsButton}>
+              <Icon name="Fav" color="$blue" height={32} width={32} />
+            </Btn>
+          </View>
         </View>
-        <View style={styles.userControlsItem}>
-          <Btn style={styles.userControlsButton}>
-            <Icon name="Fav" color="$blue" height={32} width={32} />
-          </Btn>
-        </View>
-      </View>
+      )}
     </View>
   );
 };

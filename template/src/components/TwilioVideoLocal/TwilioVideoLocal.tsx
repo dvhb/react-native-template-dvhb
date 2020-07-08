@@ -11,7 +11,7 @@ type Props = {
 
 export const TwilioVideoLocal: FC<Props> = ({ storybook }) => {
   return !storybook ? (
-    <TwilioVideoLocalView enabled style={styles.localVideo} />
+    <TwilioVideoLocalView enabled />
   ) : (
     <View style={styles.remoteVideo}>
       <Text>fake local video</Text>
