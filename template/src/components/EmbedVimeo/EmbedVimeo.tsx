@@ -31,7 +31,7 @@ export const EmbedVimeo: FC<EmbedVimeoProps> = ({ streamId }) => {
     <View style={{ flex: 1, backgroundColor: '#000' }}>
       <WebView
         style={{ flex: 1, backgroundColor: 'transparent' }}
-        source={{ uri: `https://player.vimeo.com/video/${streamId}?autoplay=1&playsinline=1&controls=0` }}
+        source={{ uri: `https://player.vimeo.com/video/${streamId}?playsinline=1` }}
         allowsInlineMediaPlayback
         injectedJavaScript={injectedJavaScript}
       />
