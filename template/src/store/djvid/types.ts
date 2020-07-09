@@ -6,8 +6,6 @@ export type DjvidLive = {
   streamType?: StreamType;
 };
 
-export type StreamType = 'youtube' | 'vimeo';
+export type StreamType = 'youtube' | 'vimeo' | 'twitch';
 
 export type Identity = string | null;
-
-export const roomName = 'djvid';

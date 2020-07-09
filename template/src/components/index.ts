@@ -1,3 +1,4 @@
+export * from './EmbedTwitch';
 export * from './EmbedVimeo';
 export * from './EmbedYoutube';
 export * from './MyComponent';
