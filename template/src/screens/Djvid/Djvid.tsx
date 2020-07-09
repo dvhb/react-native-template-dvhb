@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { Text, Aligner } from '../../ui';
-import { TwilioVideoParticipant, TwilioVideoLocal, EmbedVimeo } from '../../components';
+import { TwilioVideoParticipant, TwilioVideoLocal, EmbedVimeo, EmbedYoutube } from '../../components';
 import { useDjvidLive } from '../../hooks';
 import { Layout } from '../../components/Layout';
 
@@ -14,7 +14,14 @@ export type DjvidProps = {
 
 export const Djvid: FC<DjvidProps> = ({ storybook = false, status, videoTracks, onButtonFlipPress }) => {
   const live = useDjvidLive();
-  const djView = live?.streamId ? <EmbedVimeo streamId={live.streamId} /> : undefined;
+  const djView = live?.streamId ? (
+    <>
+      {live?.streamType === 'vimeo' && <EmbedVimeo streamId={live.streamId} />}
+      {live?.streamType === 'youtube' && <EmbedYoutube streamId={live.streamId} />}
+    </>
+  ) : (
+    undefined
+  );
 
   const otherViews = videoTracks
     ? Array.from(videoTracks, ([trackSid, trackIdentifier]) => (
