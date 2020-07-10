@@ -34,6 +34,8 @@ export class StorybookUIRoot extends React.Component {
 // If you use Expo you can safely remove this line.
 AppRegistry.registerComponent('DvhbApp', () => StorybookUIRoot);
 
+console.disableYellowBox = true;
+
 EStyleSheet.build(stylesheetConfig);
 
 setIntlConfig({
