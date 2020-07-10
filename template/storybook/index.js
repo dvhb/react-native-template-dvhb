@@ -1,11 +1,16 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
-import { getStorybookUI, configure } from '@storybook/react-native';
+import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import SplashScreen from 'react-native-splash-screen';
+import { setIntlConfig, withIntl } from 'storybook-addon-intl';
 
 import { loadStories } from './storyLoader';
 import './rn-addons';
+
+import ru from '../src/messages/ru.json';
+import { reduceMessages } from '../src/helpers/locale';
+
 import { stylesheetConfig } from '../src/boot/stylesheetConfig';
 
 // import stories
@@ -30,5 +35,12 @@ export class StorybookUIRoot extends React.Component {
 AppRegistry.registerComponent('DvhbApp', () => StorybookUIRoot);
 
 EStyleSheet.build(stylesheetConfig);
+
+setIntlConfig({
+ locales: ['ru'],
+  defaultLocale: 'ru',
+  getMessages: () => reduceMessages(ru),
+});
+addDecorator(withIntl);
 
 export default StorybookUIRoot;
