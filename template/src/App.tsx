@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createAppContainer, NavigationContainerComponent } from 'react-navigation';
+import 'react-native-gesture-handler';
 
 import { navigationService } from './services/navigation';
 import { navigationWithDrawer } from './navigation';
