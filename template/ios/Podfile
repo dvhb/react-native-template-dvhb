@@ -22,13 +22,3 @@ target 'DvhbApp' do
     flipper_post_install(installer)
   end
 end
-
-target 'DvhbApp-tvOS' do
-  # Pods for DvhbApp-tvOS
-
-  target 'DvhbApp-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end

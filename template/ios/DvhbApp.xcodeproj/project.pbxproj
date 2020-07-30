@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		003AF6CD94D64E2680CD4933 /* FuturaNewMedium-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6113876E0C684774B8320184 /* FuturaNewMedium-Reg.ttf */; };
+		E55A15E5536B4BAFBC750EFB /* FuturaNewBold-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89495DCBBDFB44AE9C3D510D /* FuturaNewBold-Reg.ttf */; };
 		00E356F31AD99517003FC87E /* DvhbAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DvhbAppTests.m */; };
-		0D6D2712AEFA488F140ADF1F /* libPods-DvhbApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD57F5A39D3532CE2735EB94 /* libPods-DvhbApp-tvOSTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -18,10 +18,8 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* DvhbAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DvhbAppTests.m */; };
-		74159C661383F49BEC076A48 /* libPods-DvhbApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 086165E1ED51ED419F2697EC /* libPods-DvhbApp-tvOS.a */; };
-		857F7A07451B112C975E9C13 /* libPods-DvhbApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB85D0CA8D122CCF3D152D4B /* libPods-DvhbApp.a */; };
-		C9504F1FAD9F5E55C3A84171 /* libPods-DvhbApp-DvhbAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3077DD0AA185B376FEC8F9EA /* libPods-DvhbApp-DvhbAppTests.a */; };
-		E55A15E5536B4BAFBC750EFB /* FuturaNewBold-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89495DCBBDFB44AE9C3D510D /* FuturaNewBold-Reg.ttf */; };
+		6DE1035BF7DE317FE9E328C2 /* libPods-DvhbApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B32E30124374EF66F22F144 /* libPods-DvhbApp.a */; };
+		C5A2E9E15985BB9A5A338FCD /* libPods-DvhbApp-DvhbAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F36FD6641BD6D81442298FE /* libPods-DvhbApp-DvhbAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +44,8 @@
 		00E356EE1AD99517003FC87E /* DvhbAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DvhbAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* DvhbAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DvhbAppTests.m; sourceTree = "<group>"; };
-		086165E1ED51ED419F2697EC /* libPods-DvhbApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DvhbApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		11EF8E3324C18EC8006E67E6 /* DvhbApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DvhbApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		0B32E30124374EF66F22F144 /* libPods-DvhbApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DvhbApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F36FD6641BD6D81442298FE /* libPods-DvhbApp-DvhbAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DvhbApp-DvhbAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* DvhbApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DvhbApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DvhbApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = DvhbApp/AppDelegate.m; sourceTree = "<group>"; };
@@ -57,23 +55,14 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DvhbApp/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* DvhbApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DvhbApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* DvhbApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DvhbApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3077DD0AA185B376FEC8F9EA /* libPods-DvhbApp-DvhbAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DvhbApp-DvhbAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DC46B1402EC7D8A5694912E /* Pods-DvhbApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-DvhbApp-tvOS/Pods-DvhbApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		5BD1A917E301EF583D6FD974 /* Pods-DvhbApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-DvhbApp-tvOSTests/Pods-DvhbApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		608F373718AD6B2490F259E8 /* Pods-DvhbApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp.release.xcconfig"; path = "Target Support Files/Pods-DvhbApp/Pods-DvhbApp.release.xcconfig"; sourceTree = "<group>"; };
-		6113876E0C684774B8320184 /* FuturaNewMedium-Reg.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaNewMedium-Reg.ttf"; path = "../assets/fonts/FuturaNewMedium-Reg.ttf"; sourceTree = "<group>"; };
-		6D6A8B6DB74C0A7965444CDF /* Pods-DvhbApp-DvhbAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-DvhbAppTests.release.xcconfig"; path = "Target Support Files/Pods-DvhbApp-DvhbAppTests/Pods-DvhbApp-DvhbAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		6F730A64A587953C9071E402 /* Pods-DvhbAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DvhbAppTests/Pods-DvhbAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		74ED88BC55A5781FB73EE28E /* Pods-DvhbApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp.debug.xcconfig"; path = "Target Support Files/Pods-DvhbApp/Pods-DvhbApp.debug.xcconfig"; sourceTree = "<group>"; };
-		7924906E864947BCA2AEE039 /* Pods-DvhbApp-DvhbAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-DvhbAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DvhbApp-DvhbAppTests/Pods-DvhbApp-DvhbAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		89495DCBBDFB44AE9C3D510D /* FuturaNewBold-Reg.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaNewBold-Reg.ttf"; path = "../assets/fonts/FuturaNewBold-Reg.ttf"; sourceTree = "<group>"; };
-		A31AD6380A83E835FB04BA5B /* Pods-DvhbApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-DvhbApp-tvOS/Pods-DvhbApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		BE62ABDDE07EB40D681A4BB0 /* Pods-DvhbAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbAppTests.release.xcconfig"; path = "Target Support Files/Pods-DvhbAppTests/Pods-DvhbAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		CD57F5A39D3532CE2735EB94 /* libPods-DvhbApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DvhbApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB85D0CA8D122CCF3D152D4B /* libPods-DvhbApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DvhbApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		920AE01196CF291853BA329C /* Pods-DvhbApp-DvhbAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-DvhbAppTests.release.xcconfig"; path = "Target Support Files/Pods-DvhbApp-DvhbAppTests/Pods-DvhbApp-DvhbAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A73D6623F5213E78782B8867 /* Pods-DvhbApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp.release.xcconfig"; path = "Target Support Files/Pods-DvhbApp/Pods-DvhbApp.release.xcconfig"; sourceTree = "<group>"; };
+		D5B2C53165757B8DB1E88994 /* Pods-DvhbApp-DvhbAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-DvhbAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DvhbApp-DvhbAppTests/Pods-DvhbApp-DvhbAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FBA43F236DBDB3103698EE53 /* Pods-DvhbApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DvhbApp-tvOSTests/Pods-DvhbApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3E913972B31574447799D3B /* Pods-DvhbApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DvhbApp.debug.xcconfig"; path = "Target Support Files/Pods-DvhbApp/Pods-DvhbApp.debug.xcconfig"; sourceTree = "<group>"; };
+		89495DCBBDFB44AE9C3D510D /* FuturaNewBold-Reg.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaNewBold-Reg.ttf"; path = "../assets/fonts/FuturaNewBold-Reg.ttf"; sourceTree = "<group>"; };
+		6113876E0C684774B8320184 /* FuturaNewMedium-Reg.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaNewMedium-Reg.ttf"; path = "../assets/fonts/FuturaNewMedium-Reg.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9504F1FAD9F5E55C3A84171 /* libPods-DvhbApp-DvhbAppTests.a in Frameworks */,
+				C5A2E9E15985BB9A5A338FCD /* libPods-DvhbApp-DvhbAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				857F7A07451B112C975E9C13 /* libPods-DvhbApp.a in Frameworks */,
+				6DE1035BF7DE317FE9E328C2 /* libPods-DvhbApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74159C661383F49BEC076A48 /* libPods-DvhbApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D6D2712AEFA488F140ADF1F /* libPods-DvhbApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +124,8 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+                13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				11EF8E3324C18EC8006E67E6 /* DvhbApp-Bridging-Header.h */,
 			);
 			name = DvhbApp;
 			sourceTree = "<group>";
@@ -149,29 +135,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				DB85D0CA8D122CCF3D152D4B /* libPods-DvhbApp.a */,
-				086165E1ED51ED419F2697EC /* libPods-DvhbApp-tvOS.a */,
-				CD57F5A39D3532CE2735EB94 /* libPods-DvhbApp-tvOSTests.a */,
-				3077DD0AA185B376FEC8F9EA /* libPods-DvhbApp-DvhbAppTests.a */,
+				0B32E30124374EF66F22F144 /* libPods-DvhbApp.a */,
+				0F36FD6641BD6D81442298FE /* libPods-DvhbApp-DvhbAppTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		607C266B7BC015C253F478FF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				74ED88BC55A5781FB73EE28E /* Pods-DvhbApp.debug.xcconfig */,
-				608F373718AD6B2490F259E8 /* Pods-DvhbApp.release.xcconfig */,
-				3DC46B1402EC7D8A5694912E /* Pods-DvhbApp-tvOS.debug.xcconfig */,
-				A31AD6380A83E835FB04BA5B /* Pods-DvhbApp-tvOS.release.xcconfig */,
-				FBA43F236DBDB3103698EE53 /* Pods-DvhbApp-tvOSTests.debug.xcconfig */,
-				5BD1A917E301EF583D6FD974 /* Pods-DvhbApp-tvOSTests.release.xcconfig */,
-				6F730A64A587953C9071E402 /* Pods-DvhbAppTests.debug.xcconfig */,
-				BE62ABDDE07EB40D681A4BB0 /* Pods-DvhbAppTests.release.xcconfig */,
-				7924906E864947BCA2AEE039 /* Pods-DvhbApp-DvhbAppTests.debug.xcconfig */,
-				6D6A8B6DB74C0A7965444CDF /* Pods-DvhbApp-DvhbAppTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		77BA31A77E3740DB9101EE26 /* Resources */ = {
@@ -198,7 +165,7 @@
 				00E356EF1AD99517003FC87E /* DvhbAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				607C266B7BC015C253F478FF /* Pods */,
+				896751923113820FB4EA36BE /* Pods */,
 				77BA31A77E3740DB9101EE26 /* Resources */,
 			);
 			indentWidth = 2;
@@ -217,6 +184,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		896751923113820FB4EA36BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3E913972B31574447799D3B /* Pods-DvhbApp.debug.xcconfig */,
+				A73D6623F5213E78782B8867 /* Pods-DvhbApp.release.xcconfig */,
+				D5B2C53165757B8DB1E88994 /* Pods-DvhbApp-DvhbAppTests.debug.xcconfig */,
+				920AE01196CF291853BA329C /* Pods-DvhbApp-DvhbAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,11 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DvhbAppTests" */;
 			buildPhases = (
-				159BCAC854B25261692C81D2 /* [CP] Check Pods Manifest.lock */,
+				99B57772D4E3BBB71ECEB08D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				46EB69BB8BA03BE89E0F2E59 /* [CP] Copy Pods Resources */,
+				4DF74E02309D0674CD39F2F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,13 +223,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DvhbApp" */;
 			buildPhases = (
-				6B5ED2F3E14CC9AE2428CA0A /* [CP] Check Pods Manifest.lock */,
+				0420A8CB575674623975BAD1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				B511E34D24FC56BDF5B1C652 /* [CP] Copy Pods Resources */,
+				7673B7292A47C1F4F6B8C9E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,7 +244,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DvhbApp-tvOS" */;
 			buildPhases = (
-				0D870A04835FA524399D7699 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -285,7 +263,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DvhbApp-tvOSTests" */;
 			buildPhases = (
-				862D10FB853C8A11CEFF7F31 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -306,16 +283,15 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1120;
-				ORGANIZATIONNAME = "";
+				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 3REV5DK8SJ;
 						LastSwiftMigration = 1120;
+						DevelopmentTeam = 3REV5DK8SJ;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -362,9 +338,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				E55A15E5536B4BAFBC750EFB /* FuturaNewBold-Reg.ttf in Resources */,
-				003AF6CD94D64E2680CD4933 /* FuturaNewMedium-Reg.ttf in Resources */,
+                13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+                E55A15E5536B4BAFBC750EFB /* FuturaNewBold-Reg.ttf in Resources */,
+                003AF6CD94D64E2680CD4933 /* FuturaNewMedium-Reg.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,83 +376,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		0D870A04835FA524399D7699 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DvhbApp-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		159BCAC854B25261692C81D2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DvhbApp-DvhbAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		46EB69BB8BA03BE89E0F2E59 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DvhbApp-DvhbAppTests/Pods-DvhbApp-DvhbAppTests-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DvhbApp-DvhbAppTests/Pods-DvhbApp-DvhbAppTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6B5ED2F3E14CC9AE2428CA0A /* [CP] Check Pods Manifest.lock */ = {
+		0420A8CB575674623975BAD1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -498,29 +398,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		862D10FB853C8A11CEFF7F31 /* [CP] Check Pods Manifest.lock */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "Bundle React Native Code And Images";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DvhbApp-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		4DF74E02309D0674CD39F2F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DvhbApp-DvhbAppTests/Pods-DvhbApp-DvhbAppTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DvhbApp-DvhbAppTests/Pods-DvhbApp-DvhbAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B511E34D24FC56BDF5B1C652 /* [CP] Copy Pods Resources */ = {
+		7673B7292A47C1F4F6B8C9E4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -536,6 +446,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DvhbApp/Pods-DvhbApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99B57772D4E3BBB71ECEB08D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DvhbApp-DvhbAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -643,7 +575,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7924906E864947BCA2AEE039 /* Pods-DvhbApp-DvhbAppTests.debug.xcconfig */;
+			baseConfigurationReference = D5B2C53165757B8DB1E88994 /* Pods-DvhbApp-DvhbAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -651,7 +583,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = DvhbAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -666,12 +598,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D6A8B6DB74C0A7965444CDF /* Pods-DvhbApp-DvhbAppTests.release.xcconfig */;
+			baseConfigurationReference = 920AE01196CF291853BA329C /* Pods-DvhbApp-DvhbAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = DvhbAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -686,17 +618,14 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74ED88BC55A5781FB73EE28E /* Pods-DvhbApp.debug.xcconfig */;
+			baseConfigurationReference = F3E913972B31574447799D3B /* Pods-DvhbApp.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = 3REV5DK8SJ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DvhbApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -704,7 +633,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dvhb.template-react-native";
 				PRODUCT_NAME = DvhbApp;
-				SWIFT_OBJC_BRIDGING_HEADER = "DvhbApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -713,16 +641,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 608F373718AD6B2490F259E8 /* Pods-DvhbApp.release.xcconfig */;
+			baseConfigurationReference = A73D6623F5213E78782B8867 /* Pods-DvhbApp.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3REV5DK8SJ;
 				INFOPLIST_FILE = DvhbApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -730,7 +655,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dvhb.template-react-native";
 				PRODUCT_NAME = DvhbApp;
-				SWIFT_OBJC_BRIDGING_HEADER = "DvhbApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -738,7 +662,6 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DC46B1402EC7D8A5694912E /* Pods-DvhbApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -760,13 +683,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A31AD6380A83E835FB04BA5B /* Pods-DvhbApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -788,13 +710,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBA43F236DBDB3103698EE53 /* Pods-DvhbApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -821,7 +742,6 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BD1A917E301EF583D6FD974 /* Pods-DvhbApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -893,7 +813,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
@@ -945,7 +866,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
