@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dvhb/react-native-template-dvhb/compare/v1.1.0...v1.2.0) (2020-08-04)
+
+
+### Features
+
+* update openapi-generator ([e5afeed](https://github.com/dvhb/react-native-template-dvhb/commit/e5afeed0a78bbd87cf912340e3995473462ba3ed))
+
 # [1.1.0](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.13...v1.1.0) (2020-08-04)
 
 
