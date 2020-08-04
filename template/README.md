@@ -6,7 +6,7 @@
 
 ## Stack
 
-- React Native `0.61.5`
+- React Native `0.63.0`
 - TypeScript `3.7.4`
 - redux `^4.0.4`
 - typesafe-actions `^4.4.2`
