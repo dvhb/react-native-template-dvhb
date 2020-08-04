@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/dvhb/react-native-template-dvhb/compare/v1.2.0...v1.2.1) (2020-08-04)
+
+
+### Bug Fixes
+
+* add missing dotenv gradle import for android ([52204b6](https://github.com/dvhb/react-native-template-dvhb/commit/52204b6da1ef06732880ce65d259703827cfc4da))
+* enable gestures for drawer toggle ([4103d79](https://github.com/dvhb/react-native-template-dvhb/commit/4103d798f732a7ee30b4bb0250a5b1b22330baae))
+
 # [1.2.0](https://github.com/dvhb/react-native-template-dvhb/compare/v1.1.0...v1.2.0) (2020-08-04)
 
 
