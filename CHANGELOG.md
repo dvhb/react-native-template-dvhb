@@ -11,6 +11,22 @@
 ### Features
 
 * add splash screen to the app ([d53745a](https://github.com/dvhb/react-native-template-dvhb/commit/d53745a4c5e9e5db41d91834c6159737076d80e5))
+* disable flipper on android ([5d7cd65](https://github.com/dvhb/react-native-template-dvhb/commit/5d7cd651787173468c6261c2988c95d2a0d5111c))
+* upgrade react-native to 0.63 ([6d8599e](https://github.com/dvhb/react-native-template-dvhb/commit/6d8599e91f3aa5caf3ed54798d713bf686546613))
+
+# [1.1.0](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.13...v1.1.0) (2020-08-04)
+
+
+### Bug Fixes
+
+* dont show addon tab on every reload ([f64d1e4](https://github.com/dvhb/react-native-template-dvhb/commit/f64d1e43c156c48344c2c3f3a69fbde6803a297b))
+* hide splash screen in storybook ([c0fc4d2](https://github.com/dvhb/react-native-template-dvhb/commit/c0fc4d283bedc295699cf5d3b453bcbe85cf7158))
+* ios problems ([16658fc](https://github.com/dvhb/react-native-template-dvhb/commit/16658fc1e7dfd9bc1ddadf9edc51a2339d4f6f86))
+
+
+### Features
+
+* add splash screen to the app ([d53745a](https://github.com/dvhb/react-native-template-dvhb/commit/d53745a4c5e9e5db41d91834c6159737076d80e5))
 * upgrade react-native to 0.63 ([6d8599e](https://github.com/dvhb/react-native-template-dvhb/commit/6d8599e91f3aa5caf3ed54798d713bf686546613))
 
 ## [1.0.13](https://github.com/dvhb/react-native-template-dvhb/compare/v1.0.12...v1.0.13) (2020-02-09)
