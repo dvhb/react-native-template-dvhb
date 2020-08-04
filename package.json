@@ -51,8 +51,7 @@
     ],
     "branches": [
       "master",
-      "next",
-      "webview"
+      "next"
     ]
   }
 }
