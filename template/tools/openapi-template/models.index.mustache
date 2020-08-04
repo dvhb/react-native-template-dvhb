@@ -1,0 +1,14 @@
+{{#models}}
+{{#model}}
+export * from './{{{ classFilename }}}';
+{{/model}}
+{{/models}}
+
+export enum FetchState {
+  Initial = 0,
+  InProgress = 1,
+  Finished = 2,
+  Error = 3,
+  NotFound = 4,
+  Obsolete = 5,
+}
