@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { useDarkMode } from 'react-native-dynamic';
 import { Text as RNText, TextProps as RNTextProps, StyleProp, TextStyle } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
@@ -15,8 +16,9 @@ export type TextProps = {
 } & RNTextProps;
 
 export function Text({ children, style, size = 'body1', weight = 'regular', color = '$black', ...props }: TextProps) {
+  const isDarkMode = useDarkMode();
   const textColorStyle = EStyleSheet.create({
-    color: { color },
+    color: isDarkMode ? { color: 'white' } : { color },
   });
 
   return (
