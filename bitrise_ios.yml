@@ -31,27 +31,6 @@ workflows:
             mv .env.example .env
             npm ci
     - script@1.1.5:
-        title: android build scripts
-        inputs:
-        - content: |-
-            #!/usr/bin/env bash
-            set -e
-            npx jetify
-    - file-downloader@1.0.1:
-        inputs:
-        - destination: "$ANDROID_KEYSTORE_FILE"
-        - source: "$BITRISEIO_ANDROID_KEYSTORE_URL"
-    - gradle-runner@1.9.0:
-        inputs:
-        - gradle_file: android/build.gradle
-        - gradlew_path: "./android/gradlew"
-        - gradle_task: assembleRelease
-#    - google-play-deploy:
-#        inputs:
-#        - service_account_json_key_path: "$BITRISEIO_release_URL"
-#        - package_name: com.dvhb.template-react-native
-    - deploy-to-bitrise-io@1.7.1: {}
-    - script@1.1.5:
         title: ios build scripts
         inputs:
         - content: |-
@@ -105,6 +84,3 @@ app:
   - opts:
       is_expand: false
     IOS_TEAM_ID: 3REV5DK8SJ
-  - opts:
-      is_expand: false
-    ANDROID_KEYSTORE_FILE: "/Users/vagrant/git/android/app/release.keystore"
