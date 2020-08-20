@@ -11,3 +11,8 @@
 - redux `^4.0.4`
 - typesafe-actions `^4.4.2`
 - react-navigation `^3.11.1`
+
+
+## Known issues
+
+1. @storybook/react-native-server > 5.2.8 doesn't work with addons tab, [issue #24](https://github.com/storybookjs/react-native/issues/24)
