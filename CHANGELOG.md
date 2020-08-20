@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dvhb/react-native-template-dvhb/compare/v1.2.1...v1.3.0) (2020-08-20)
+
+
+### Features
+
+* separate bitrise ios/android configs [skip ci] ([0578a45](https://github.com/dvhb/react-native-template-dvhb/commit/0578a4591f1f7f1e878285abd40a06963788a5de))
+
 ## [1.2.1](https://github.com/dvhb/react-native-template-dvhb/compare/v1.2.0...v1.2.1) (2020-08-04)
 
 
