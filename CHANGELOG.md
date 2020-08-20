@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/dvhb/react-native-template-dvhb/compare/v1.3.0...v1.3.1) (2020-08-20)
+
+
+### Bug Fixes
+
+* react-native-server addons tabs ([e303b0e](https://github.com/dvhb/react-native-template-dvhb/commit/e303b0e88d1aca5de02d54be456df37338b44d6d))
+
 # [1.3.0](https://github.com/dvhb/react-native-template-dvhb/compare/v1.2.1...v1.3.0) (2020-08-20)
 
 
