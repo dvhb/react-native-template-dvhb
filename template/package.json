@@ -9,6 +9,7 @@
     "generate:api": "rimraf src/api/** && openapi-generator generate -i swagger/api-schema.yaml -g typescript-fetch --model-name-prefix I -o ./src/api -p modelPropertyNaming=original -t ./tools/openapi-template",
     "icons": "dvhb-icons generate -n -i src/ui/Icon/src -c src/ui/Icon/components",
     "icons:figma2svg": "dvhb-icons figma2svg -i src/ui/Icon/src",
+    "postinstall": "patch-package",
     "ios": "react-native run-ios",
     "ios:release": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
     "lint": "tslint -p tsconfig.json -c tslint.json -t verbose",
@@ -51,6 +52,7 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "@mauron85/react-native-background-geolocation": "^0.6.3",
     "@react-native-community/async-storage": "^1.6.1",
     "@react-native-community/masked-view": "^0.1.6",
     "react": "^16.13.1",
@@ -105,6 +107,8 @@
     "jest": "^26.4.1",
     "lint-staged": "^10.2.11",
     "metro-react-native-babel-preset": "^0.62.0",
+    "patch-package": "^6.2.2",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.0.5",
     "react-dom": "^16.13.1",
     "react-native-storybook-loader": "^2.0.2",
