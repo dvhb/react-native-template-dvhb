@@ -108,7 +108,6 @@
     "lint-staged": "^10.2.11",
     "metro-react-native-babel-preset": "^0.62.0",
     "patch-package": "^6.2.2",
-    "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.0.5",
     "react-dom": "^16.13.1",
     "react-native-storybook-loader": "^2.0.2",
